@@ -69,6 +69,8 @@ nav{
     top: 20vh;
     left: 30vw;
     color: #b7c5d3;
+    padding-inline: 20px;
+    word-wrap: break-word;
 }
 
 .text-box pHi{
@@ -130,8 +132,10 @@ nav .fa-solid{
         width: auto;
         height: auto;
         top: 10vh;
-        left: 6vw;
+        left: 5vw;
         color: #b7c5d3;
+        padding-inline: 20px;
+        word-wrap: break-word;
     }
 
     .text-box pHi{
@@ -153,7 +157,8 @@ nav .fa-solid{
     }
     .text-box p{
         font-size: 16px;
-        inline-size: 22em;
+        max-width: 22em;
+        width: auto;
         line-height: 1.75;
         color: #b7c5d3;
     }
