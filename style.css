@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1d252c;
+}
+
+/*Homepage*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/*Navigation links*/
+nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #b7c5d3;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Center underline animation
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+*/
+
+/* Left underline animation */
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+    position: absolute;
+}
+.nav-links ul li:hover::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    transform: scaleX(0.75);
+    transform-origin: bottom left;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/*Title text*/
+.text-box{
+    position:relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    top: 20vh;
+    left: 30vw;
+    color: #b7c5d3;
+}
+
+.text-box pHi{
+    font-size: 18px;
+    font-weight: 300;
+    color: #82FFD8;
+}
+.text-box pName{
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 0.8;
+    color: #dfe7ee;
+}
+.text-box pTagline{
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #b7c5d3;
+}
+.text-box p{
+    font-size: 18px;
+    inline-size: 30em;
+    line-height: 1.75;
+    color: #b7c5d3;
+}
+
+/*Welcome button*/
+
+.welcome-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #b7c5d3;
+    border: 1px solid #b7c5d3;
+    border-radius: 5px;
+    padding: 12px 55px;
+    font-size: 18px;
+    position: relative;
+    top: 3em;
+    left: 0em;
+    background: transparent;
+    cursor: pointer;
+}
+.welcome-btn:hover{
+    border: 1px solid #82FFD8;
+    background: #82FFD8;
+    color: #1d252c;
+    transition: 1s;
+}
+
+
+/*Mobile support*/
+
+
+@media(max-width: 700px){
+    /*Title text*/
+    .text-box{
+        position:relative;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        top: 10vh;
+        left: 7vw;
+        color: #b7c5d3;
+    }
+
+    .text-box pHi{
+        font-size: 18px;
+        font-weight: 300;
+        color: #82FFD8;
+    }
+    .text-box pName{
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 0.75;
+        color: #dfe7ee;
+    }
+    .text-box pTagline{
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.75;
+        color: #b7c5d3;
+    }
+    .text-box p{
+        font-size: 16px;
+        inline-size: 22em;
+        line-height: 1.75;
+        color: #b7c5d3;
+    }
+
+    /*Welcome button*/
+
+    .welcome-btn{
+        display: inline-block;
+        text-decoration: none;
+        color: #b7c5d3;
+        border: 1px solid #82FFD8;
+        border-radius: 5px;
+        padding: 12px 55px;
+        font-size: 18px;
+        position: relative;
+        top: 3em;
+        left: 0em;
+        background: transparent;
+        cursor: pointer;
+    }
+    .welcome-btn:hover{
+        border: 1px solid #82FFD8;
+        background: #82FFD8;
+        color: #1d252c;
+        transition: 1s;
+    }
+    /*.nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        display: block;
+        position: relative;
+        background: #AD0000;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }*/
+
+}
