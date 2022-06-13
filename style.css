@@ -5,8 +5,10 @@
     background-color: #1d252c;
 }
 
+/*------------------------------------------------------------------*?
+
 /*Homepage*/
-.header{
+.home-page{
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -57,8 +59,6 @@ nav{
     transform: scaleX(0.75);
     transform-origin: bottom left;
 }
-
-/*-----------------------------------------------------------------------------------*/
 
 /*Title text*/
 .text-box{
@@ -122,6 +122,116 @@ nav{
 nav .fa-solid{
     display: none;
 }
+
+/*------------------------------------------------------------------*?
+
+/*About Me*/
+.about-me{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.about-text{
+    position:relative;
+    display: inline-block;
+    width: 40em;
+    height: auto;
+    top: 20vh;
+    left: 25vw;
+    color: #b7c5d3;
+    padding-inline: 20px;
+    word-wrap: break-word;
+}
+.about-text p1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.about-text p2{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #D3E1EF;
+}
+.about-text p3{
+    font-size: 18px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #B7C5D3;
+}
+.about-text p4{
+    font-size: 24px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #B7C5D3;
+}
+.about-text p5{
+    font-size: 18px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #B7C5D3;
+}
+.about-text p6{
+    font-size: 18px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #B7C5D3;
+}
+.about-text p7{
+    font-size: 22px;
+    font-weight: 500;
+    inline-size: 40em;
+    line-height: 0.25;
+    color: #D3E1EF;
+}
+.about-text ul{
+    display: inline-block;
+    margin: 0.5em;
+    line-height: 1.5;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+.about-text ul li::marker{
+    color: #82FFD8;
+}
+
+/*------------------------------------------------------------------*?
+
+/*Projects*/
+.projects{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.projects-text{
+    position:relative;
+    display: inline-block;
+    width: 40em;
+    height: auto;
+    top: 20vh;
+    left: 25vw;
+    color: #b7c5d3;
+    padding-inline: 20px;
+    word-wrap: break-word;
+}
+.projects-text p1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.projects-text p2{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #D3E1EF;
+}
+
+/*------------------------------------------------------------------*?
 
 /*Mobile support*/
 @media(max-width: 700px){
@@ -202,7 +312,7 @@ nav .fa-solid{
         text-align: left;
         z-index: 2;
         padding: 30;
-        transition: 1s;
+        transition: 0.5s;
     }
     nav .fa-solid{
         display: block;
@@ -210,7 +320,6 @@ nav .fa-solid{
         background: transparent;
         padding: 20px;
         margin: 0px;
-        font-size: 35px;
         cursor: pointer;
     }
     .nav-links ul li a{
@@ -236,5 +345,31 @@ nav .fa-solid{
         transition: 0.5s;
         transform: scaleX(0.25);
         transform-origin: bottom center;
+    }
+
+    /*About Me*/
+    .about-text{
+        position:relative;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        top: 10vh;
+        left: 0vw;
+        color: #b7c5d3;
+        padding-inline: 20px;
+        word-wrap: break-word;
+    }
+
+    /*Projects*/
+    .projects-text{
+        position:relative;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        top: 10vh;
+        left: 0vw;
+        color: #b7c5d3;
+        padding-inline: 20px;
+        word-wrap: break-word;
     }
 }
