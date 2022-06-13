@@ -25,7 +25,7 @@ body::-webkit-scrollbar-thumb {
 
 /*Homepage*/
 .home-page{
-    min-height: 80vh;
+    min-height: 100vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -220,7 +220,7 @@ nav .fa-solid{
 
 /*Projects*/
 .projects{
-    min-height: 80vh;
+    min-height: 100vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -289,7 +289,7 @@ nav .fa-solid{
     height: 100%;
     position: relative;
     top: -10em;
-    left: 30em;
+    left: 25em;
 }
 .projects-text p5{
     position: relative;
@@ -333,7 +333,7 @@ nav .fa-solid{
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-160%, -85%);
+    transform: translate(-160%, -65%);
     text-decoration: none;
     width: 20em;
     height:20em;
@@ -352,7 +352,7 @@ nav .fa-solid{
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, -85%);
+    transform: translate(-50%, -65%);
     text-decoration: none;
     width: 20em;
     height:20em;
@@ -371,7 +371,7 @@ nav .fa-solid{
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(60%, -85%);
+    transform: translate(60%, -65%);
     text-decoration: none;
     width: 20em;
     height:20em;
