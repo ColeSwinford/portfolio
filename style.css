@@ -358,6 +358,7 @@ nav .fa-solid{
         color: #b7c5d3;
         padding-inline: 20px;
         word-wrap: break-word;
+        padding-bottom: 60px;
     }
 
     /*Projects*/
@@ -371,5 +372,6 @@ nav .fa-solid{
         color: #b7c5d3;
         padding-inline: 20px;
         word-wrap: break-word;
+        padding-bottom: 60px;
     }
 }
