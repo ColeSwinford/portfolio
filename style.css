@@ -563,12 +563,34 @@ nav .fa-solid{
         word-wrap: break-word;
     }
     .projects-text p3{
+        display: inline-block;
+        width: auto;
+        height: auto;
+        position: relative;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #b7c5d3;
+        text-decoration: none;
+    }
+    .projects-text p4{
+        display: inline-block;
+        width: 50%;
+        height: 50%;
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #b7c5d3;
+        display: inline-block;
+    }
+    .projects-text p5{
         font-size: 18px;
         inline-size: 40em;
         line-height: 1.5;
         color: #b7c5d3;
     }
-    .projects-text p4 a{
+    .projects-text p6 a{
         font-size: 30px;
         font-weight: 500;
         line-height: 1.5;
@@ -585,7 +607,7 @@ nav .fa-solid{
         top: -9em;
         left: 0em;
     }
-    .projects-text p5{
+    .projects-text p7{
         position: relative;
         top: 15.5em;
         left: -9em;
@@ -612,20 +634,20 @@ nav .fa-solid{
     .other-projects-text p1{
         display: inline-block;
         text-align: center;
-        font-size: 30px;
+        font-size: 28px;
         line-height: 1.5;
         color: #b7c5d3;
         position: relative;
         top: 0%;
         left: 50%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 150%);
     }
     .other-projects-text p2 a{ /*Left1*/
         position: absolute;
         top: 50%;
         left: 50%;
         text-align: center;
-        transform: translate(-50%, -170%);
+        transform: translate(-50%, -180%);
         text-decoration: none;
         width: 20em;
         height:20em;
@@ -644,7 +666,7 @@ nav .fa-solid{
         top: 50%;
         left: 50%;
         text-align: center;
-        transform: translate(-50%, -65%);
+        transform: translate(-50%, -75%);
         text-decoration: none;
         width: 20em;
         height:20em;
@@ -663,7 +685,7 @@ nav .fa-solid{
         top: 50%;
         left: 50%;
         text-align: center;
-        transform: translate(-50%, 40%);
+        transform: translate(-50%, 30%);
         text-decoration: none;
         width: 20em;
         height:20em;
