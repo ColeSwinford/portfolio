@@ -25,7 +25,7 @@ body::-webkit-scrollbar-thumb {
 
 /*Homepage*/
 .home-page{
-    min-height: 100vh;
+    min-height: 105vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -144,7 +144,7 @@ nav .fa-solid{
 
 /*About Me*/
 .about-me{
-    min-height: 80vh;
+    min-height: 100vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -155,7 +155,7 @@ nav .fa-solid{
     display: inline-block;
     width: 40em;
     height: auto;
-    top: 20vh;
+    top: 10vh;
     left: 25vw;
     color: #b7c5d3;
     padding-inline: 20px;
@@ -220,18 +220,19 @@ nav .fa-solid{
 
 /*Projects*/
 .projects{
-    min-height: 100vh;
+    min-height: 120vh;
     height: auto;
     width: 100%;
     position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 .projects-text{
     position:relative;
     display: inline-block;
     width: 40em;
     height: auto;
-    top: 20vh;
+    top: 10vh;
     left: 25vw;
     color: #b7c5d3;
     padding-inline: 20px;
@@ -250,12 +251,26 @@ nav .fa-solid{
     color: #D3E1EF;
 }
 .projects-text p3{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #b7c5d3;
+    text-decoration: none;
+}
+.projects-text p4{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #b7c5d3;
+    display: inline-block;
+}
+.projects-text p5{
     font-size: 18px;
     inline-size: 40em;
     line-height: 1.5;
     color: #82FFD8;
 }
-.projects-text p4 a{
+.projects-text p6 a{
     font-size: 30px;
     font-weight: 500;
     line-height: 1.5;
@@ -263,7 +278,7 @@ nav .fa-solid{
     text-decoration: none;
 }
 /* Left underline animation */
-.projects-text p4 a::after{
+.projects-text p6 a::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -272,7 +287,7 @@ nav .fa-solid{
     margin: auto;
     position: absolute;
 }
-.projects-text p4 a:hover::after{
+.projects-text p6 a:hover::after{
     content: '';
     width: 25%;
     height: 2px;
@@ -290,8 +305,9 @@ nav .fa-solid{
     position: relative;
     top: -10em;
     left: 25em;
+    border-radius: 10px
 }
-.projects-text p5{
+.projects-text p7{
     position: relative;
     top: 5em;
     left: 0em;
@@ -385,10 +401,11 @@ nav .fa-solid{
     border-radius: 5px;
     background: #2F4858;
 }
+
 /*------------------------------------------------------------------*?
 
-/*Mobile support*/
-@media(max-width: 700px){
+/*Mobile support og=700px*/
+@media(max-width: 800px){
     /*Title text*/
     .text-box{
         position:relative;
