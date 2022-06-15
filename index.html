@@ -33,7 +33,7 @@
                     </ul>
                 </div>
                 <i class="fa-solid fa-bars-staggered fa-flip-horizontal fa-2x" style="background:transparent" onclick="showMenu()"></i>
-            </nav>  
+            </nav>
 
         <div class="text-box">
             <pHi>Hi, my name is<br><br></pHi>
@@ -55,13 +55,13 @@
                 <p6><br><br>At the University of Louisville, I'm a member on River City Rocketry (RCR) Avionics sub-team where I work with other engineers to gather, manipulate, and act on in-flight rocket data. I also serve as the Electrical/Computer Engineering Lead for the Speed Formula Society of Automotive Engineers (FSAE) team, where I work with others to develop our on-car computer systems.<br><br></p6>
                 <p7>Skills<br>&nbsp;</p7>
                 <ul>
-                    <li>Python</li>
                     <li>C/C++</li>
                     <li>Java</li>
+                    <li>Python</li>
                     <li>HTML/CSS</li>
+                    <li>JavaScript</li>
                     <li>Calculus I</li>
                 </ul>
-
             </div>
         </section>
 
@@ -73,7 +73,7 @@
                 <p3>a commitment to open-source<br></p3>
                 <p4>As a proud supporter of Free and Open-Source Software (FOSS), all my projects are open-source (including this website!)<br><br></p4>
                 <p5><br>featured project<br></p5>
-                <p6><a href="https://github.com/ColeSwinford/Python--EZ-Hotkey">EZ Hotkey</a></p6>
+                <p6><a href="https://github.com/ColeSwinford/Python--EZ-Hotkey">EZ Hotkey<br></a></p6>
                 <p7>A free, open-source, and easy-to-use hotkey program for Windows. This .exe file written in Python allows users to quickly define an input (hotkey) and an output (action upon input actuation). EZ Hotkey stays alive when minimized, so you can keep using your hotkeys!</p7>
                 <img class="EZHotkey" viewBox="0 0 auto auto" preserveAspectRatio="meet" src="images/EZ Hotkey.svg">
             </div>
@@ -87,7 +87,23 @@
                 <p3><a href="">test middle</a></p3>
                 <p4><a href="">test right</a></p4>
             </div>
-</section>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-page" id="contact">
+            <div class="contact-text">
+                <p1>/</p1>
+                <p2>contact<br></p2>
+                <p3>let's get in touch<br><br></p3>
+                <p4>email<br></p4>
+                <p5><a onclick="copyEmail()" id="email">site.coleswinford@gmail.com</a></p5>
+                <p6><br><br><br>platforms<br></p6>
+                <ul>
+                    <a href="https://github.com/ColeSwinford"><i class="fa-brands fa-github fa-3x"></i></a>
+                    <a href="https://www.linkedin.com/in/steven-swinford-94553b11b/"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                </ul>
+            </div>
+        </section>
 
 <script>
     //JavaScript Toggle Menu
@@ -98,6 +114,17 @@
     function hideMenu(){
         navLinks.style.right = "-200px";
     }
+
+    function copyEmail(){
+        //
+        var copyText = "site.coleswinford@gmail.com";
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText);
+
+        // Alert the copied text
+        alert("Copied the text: " + copyText);
+}
 
     /*var scale = Math.min( 
     availableWidth / contentWidth, 

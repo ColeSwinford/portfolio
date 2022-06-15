@@ -84,7 +84,7 @@ nav{
     width: auto;
     height: auto;
     top: 20vh;
-    left: 30vw;
+    left: 25vw;
     color: #b7c5d3;
     padding-inline: 20px;
     word-wrap: break-word;
@@ -157,7 +157,7 @@ nav .fa-solid{
     width: 40em;
     height: auto;
     top: 10vh;
-    left: 25vw;
+    left: 20vw;
     color: #b7c5d3;
     padding-inline: 20px;
     word-wrap: break-word;
@@ -233,7 +233,7 @@ nav .fa-solid{
     width: 40em;
     height: auto;
     top: 10vh;
-    left: 25vw;
+    left: 15vw;
     color: #b7c5d3;
     padding-inline: 20px;
     word-wrap: break-word;
@@ -301,14 +301,15 @@ nav .fa-solid{
 .projects-text img.EZHotkey{
     position: relative;
     top: -15vh;
-    left: 20vw;
-    border-radius: 10px
+    left: 25vw;
+    border-radius: 10px;
+    inline-size: 40em;
 }
 .projects-text p7{
     position: relative;
     top: 5em;
     left: 0em;
-    width: 30em;
+    width: 27em;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -325,8 +326,8 @@ nav .fa-solid{
 
 /*Other  projects*/
 .other-projects{
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 80vh;
+    height: auto;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -344,7 +345,8 @@ nav .fa-solid{
 .other-projects-text p2 a{ /* Left */
     position: relative;
     top: 5em;
-    left: 1%;
+    left: 50%;
+    transform: translateX(-290%);
     text-align: center;
     text-decoration: none;
     width: 20em;
@@ -362,7 +364,8 @@ nav .fa-solid{
 .other-projects-text p3 a{ /* Middle */
     position: relative;
     top: 5em;
-    left: 2%;
+    left: 50%;
+    transform: translateX(-285%);
     text-align: center;
     text-decoration: none;
     text-decoration: none;
@@ -381,7 +384,8 @@ nav .fa-solid{
 .other-projects-text p4 a{ /* Right */
     position: relative;
     top: 5em;
-    left: 3%;
+    left: 50%;
+    transform: translateX(-280%);
     text-align: center;
     text-decoration: none;
     text-decoration: none;
@@ -399,6 +403,97 @@ nav .fa-solid{
 }
 
 /*------------------------------------------------------------------*/
+
+/*About me*/
+.about-me{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.contact-text{
+    position:relative;
+    display: inline-block;
+    min-height: 100vh;
+    width: 40em;
+    top: 10vh;
+    left: 20vw;
+    color: #b7c5d3;
+    padding-inline: 20px;
+    word-wrap: break-word;
+}
+.contact-text p1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.contact-text p2{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #D3E1EF;
+}
+.contact-text p3{
+    font-size: 26px;
+    font-weight: 500;
+    color: #b7c5d3;
+    text-decoration: none;
+}
+.contact-text p4{
+    font-size: 18px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.contact-text p5 a{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #b7c5d3;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Left underline animation */
+.contact-text p5 a::after{
+    transition: 0.5s;
+    content: '';
+    font-size: 16px;
+    color: transparent;
+    width: 20%;
+    height: 2px;
+    background: transparent;
+    display: block;
+    margin: auto;
+    position: absolute;
+}
+.contact-text p5 a:hover::after{
+    content: 'copy to clipboard';
+    font-size: 16px;
+    color: #b7c5d3;
+    width: 35%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+    position: absolute;
+    transition: 0.5s;
+}
+.contact-text p6{
+    font-size: 18px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.fa-brands{
+    color:#b7c5d3;
+    padding-top: 0.25em;
+    padding-right: 0.5em;
+}
+.fa-brands:hover {
+    color: #82FFD8;
+}
 
 /*Mobile support og=700px*/
 @media(max-width: 800px){
@@ -531,7 +626,6 @@ nav .fa-solid{
     .projects-text{
         position:relative;
         display: inline-block;
-        
         width: auto;
         height: auto;
         top: 10vh;
