@@ -586,7 +586,6 @@ nav .fa-solid{
         color: #D3E1EF;
         background: transparent;
         padding: 20px;
-        margin: 0px;
         cursor: pointer;
     }
     .nav-links ul li a{
@@ -599,7 +598,6 @@ nav .fa-solid{
         height: 2px;
         background: #82FFD8;
         display: block;
-        margin: auto;
         position: relative;
     }
     .nav-links ul li:hover::after{
@@ -608,7 +606,6 @@ nav .fa-solid{
         height: 2px;
         background: #82FFD8;
         display: block;
-        margin: auto;
         transition: 0.5s;
         transform: scaleX(0.25);
         transform-origin: bottom center;
@@ -634,7 +631,7 @@ nav .fa-solid{
         display: inline-block;
         min-width: 37.5em;
         min-height: 100vh;
-        width: auto;
+        width: 100%;
         height: auto;
         top: 20vh;
         left: 0vw;
@@ -708,12 +705,13 @@ nav .fa-solid{
         width: auto;
         position: relative;
         overflow: hidden;
+        padding-top: 5vh;
         padding-bottom: 20vh;
     }
     .other-projects-text p1{
         display: inline-block;
         text-align: center;
-        font-size: 28px;
+        font-size: 26px;
         line-height: 1.5;
         color: #b7c5d3;
         position: relative;
@@ -727,8 +725,8 @@ nav .fa-solid{
         transform: translateX(-50%);
         text-align: center;
         text-decoration: none;
-        width: 20em;
-        height:20em;
+        width: 18em;
+        height:18em;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
@@ -747,8 +745,8 @@ nav .fa-solid{
         text-align: center;
         text-decoration: none;
         text-decoration: none;
-        width: 20em;
-        height:20em;
+        width: 18em;
+        height:18em;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
@@ -767,8 +765,8 @@ nav .fa-solid{
         text-align: center;
         text-decoration: none;
         text-decoration: none;
-        width: 20em;
-        height:20em;
+        width: 18em;
+        height:18em;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
@@ -804,7 +802,7 @@ nav .fa-solid{
         color: #82FFD8;
     }
     .contact-text p5 a{
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 1.5;
         color: #b7c5d3;
@@ -821,7 +819,6 @@ nav .fa-solid{
         height: 2px;
         background: transparent;
         display: block;
-        margin: auto;
         position: absolute;
     }
     .contact-text p5 a:hover::after{
@@ -832,7 +829,6 @@ nav .fa-solid{
         height: 2px;
         background: #82FFD8;
         display: block;
-        margin: auto;
         position: absolute;
         transition: 0.5s;
     }
