@@ -496,6 +496,11 @@ nav .fa-solid{
     color: #82FFD8;
 }
 
+/*------------------------------------------------------------------*/
+
+/*Resume*/
+
+
 /*Mobile support og=700px*/
 @media(max-width: 800px){
     /*Title text*/
@@ -627,19 +632,7 @@ nav .fa-solid{
     .projects-text{
         position:relative;
         display: inline-block;
-        width: auto;
-        height: auto;
-        top: 10vh;
-        left: 0vw;
-        color: #b7c5d3;
-        word-wrap: break-word;
-        padding-bottom: 10vh;
-    }
-    /*Projects*/
-    .projects-text{
-        position:relative;
-        display: inline-block;
-        min-width: 40em;
+        min-width: 37.5em;
         min-height: 100vh;
         width: auto;
         height: auto;
@@ -683,22 +676,21 @@ nav .fa-solid{
         color: #82FFD8;
         text-decoration: none;
         position: relative;
-        top: -4.75em;
     }
     .projects-text img.EZHotkey{
         align-self: center;
         display: inline-block;
-        width: 50%;
-        height: 50%;
+        width: 52%;
+        height: 52%;
         position: relative;
-        top: -9em;
+        top: -10em;
         left: 0em;
     }
     .projects-text p7{
         position: relative;
-        top: 15.5em;
-        left: -9em;
-        width: 19em;
+        top: 16em;
+        left: 0em;
+        width:48%;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
@@ -708,15 +700,15 @@ nav .fa-solid{
         border: 2px solid transparent;
         border-radius: 5px;
         background: #2F4858;
-        z-index: 1;
     }
     /*Other  projects*/
     .other-projects{
         min-height: 140vh;
         height: 100vh;
-        width: 100%;
+        width: auto;
         position: relative;
         overflow: hidden;
+        padding-bottom: 20vh;
     }
     .other-projects-text p1{
         display: inline-block;
@@ -786,5 +778,62 @@ nav .fa-solid{
         border: 2px solid transparent;
         border-radius: 5px;
         background: #2F4858;
+    }
+
+        /*About me*/
+    .contact-text{
+        position:relative;
+        display: inline-block;
+        min-height: 100vh;
+        width: auto;
+        top: 10vh;
+        left: 0vw;
+        color: #b7c5d3;
+        word-wrap: break-word;
+    }
+    .contact-text p3{
+        font-size: 26px;
+        font-weight: 500;
+        color: #b7c5d3;
+        text-decoration: none;
+    }
+    .contact-text p4{
+        font-size: 18px;
+        inline-size: 40em;
+        line-height: 1.5;
+        color: #82FFD8;
+    }
+    .contact-text p5 a{
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #b7c5d3;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* Left underline animation */
+    .contact-text p5 a::after{
+        transition: 0.5s;
+        content: '(tap to copy)';
+        font-size: 14px;
+        color: #b7c5d3;
+        width: auto;
+        height: 2px;
+        background: transparent;
+        display: block;
+        margin: auto;
+        position: absolute;
+    }
+    .contact-text p5 a:hover::after{
+        content: 'copied to clipboard';
+        font-size: 16px;
+        color: #b7c5d3;
+        width: auto;
+        height: 2px;
+        background: #82FFD8;
+        display: block;
+        margin: auto;
+        position: absolute;
+        transition: 0.5s;
     }
 }
