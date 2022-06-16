@@ -219,6 +219,72 @@ nav .fa-solid{
 
 /*------------------------------------------------------------------*?
 
+/*Experience*/
+.exp{
+    min-height: 80vh;
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.exp-title{
+    position:relative;
+    display: inline-block;
+    width: 40em;
+    height: auto;
+    top: 10vh;
+    left: 20vw;
+    color: #b7c5d3;
+    padding-inline: 20px;
+    word-wrap: break-word;
+}
+.exp-title p1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.exp-title p2{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #D3E1EF;
+}
+.exp-title p3{
+    font-size: 28px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #B7C5D3;
+}
+.exp-title p4{
+    font-size: 22px;
+    inline-size: 40em;
+    line-height: 1.5;
+    color: #82FFD8;
+}
+.exp-box{
+    position: relative;
+    top: 10vh;
+    left: 20vw;
+}
+.company1{
+    text-decoration: none;
+    font-size: 12px;
+    color: #b7c5d3;
+    border: 2px solid #2F4858;
+    border-left: 2px solid #82FFD8;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.company1:hover{
+    background: #2F4858;
+    transition: 1s;
+}
+
+/*------------------------------------------------------------------*?
+
 /*Projects*/
 .projects{
     min-height: 120vh;
@@ -499,6 +565,7 @@ nav .fa-solid{
 /*------------------------------------------------------------------*/
 
 /*Resume*/
+
 
 
 /*Mobile support og=700px*/

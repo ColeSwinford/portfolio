@@ -17,31 +17,31 @@
     </head>
     <body>
         <!-- Home Page -->
-        <section class="home-page" id="home">
-
+        <section class="home-page">
             <nav>
                 <!--Navigation links-->
                 <i class="fa-solid"></i>
-                <div class="nav-links" id="navLinks">
+                <div class="nav-links">
                     <ul>
                         <i class="fa-solid fa-xmark fa-2x" style="background:#323B42" onclick="hideMenu()"></i>
-                        <li><a href="#home" onclick="hideMenu()">/home</a></li>
                         <li><a href="#about" onclick="hideMenu()">/about me</a></li>
+                        <li><a href="#exp" onclick="hideMenu()">/experience</a></li>
                         <li><a href="#projects" onclick="hideMenu()">/projects</a></li>
                         <li><a href="#contact" onclick="hideMenu()">/contact</a></li>
-                        <li><a href="#resume" onclick="hideMenu()">/resume</a></li>
+                        <li><a href="#resume" onclick="hideMenu()" id="resume-btn">/resume</a></li>
                     </ul>
                 </div>
                 <i class="fa-solid fa-bars-staggered fa-flip-horizontal fa-2x" style="background:transparent" onclick="showMenu()"></i>
             </nav>
 
-        <div class="text-box">
-            <pHi>Hi, my name is<br><br></pHi>
-            <pName>Cole Swinford.<br></pName>
-            <pTagline>I build things.<br></pTagline>
-            <p>I'm a Computer Science and Engineering student at the University of Louisville. In my free time, I pick up new programming languages and work on personal/organization projects.</p>
-            <a href="#about" class="welcome-btn">take me away</a>
-        </div>
+            <!--Welcome text-->
+            <div class="text-box">
+                <pHi>Hi, my name is<br><br></pHi>
+                <pName>Cole Swinford.<br></pName>
+                <pTagline>I build things.<br></pTagline>
+                <p>I'm a Computer Science and Engineering student at the University of Louisville. In my free time, I pick up new programming languages and work on personal/organization projects.</p>
+                <a href="#about" class="welcome-btn">take me away</a>
+            </div>
         </section>
 
         <!-- About Me -->
@@ -62,6 +62,17 @@
                     <li>JavaScript</li>
                     <li>Calculus I</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Work -->
+        <section class="exp" id="exp">
+            <div class="exp-title">
+                <p1>/</p1>
+                <p2>experience<br></p2>
+                <p3>Status...</p3>
+                <p4>searching for internship experience<br><br><br></p4>
+                <p5><a onclick="" class="company1">Your company here</a></p5>
             </div>
         </section>
 
@@ -105,32 +116,28 @@
             </div>
         </section>
 
-<script>
-    //JavaScript Toggle Menu
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
+        <script>
+            //Nav bar
+            var nav = document.getElementById("navBar");
+            function showMenu(){
+                nav.style.right = "0";
+            }
+            function hideMenu(){
+                nav.style.right = "-200px";
+            }
 
-    function copyEmail(){
-        //
-        var copyText = "site.coleswinford@gmail.com";
+            //Copy email
+            function copyEmail(){
+                var copyText = "site.coleswinford@gmail.com";
+                navigator.clipboard.writeText(copyText);
+                alert("Copied the text: " + '"'+copyText+'"' + " to clipboard.");
+            }
 
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(copyText);
-
-        // Alert the copied text
-        alert("Copied the text: " + copyText);
-}
-
-    /*var scale = Math.min( 
-    availableWidth / contentWidth, 
-    availableHeight / contentHeight 
-    );*/
-</script>
+            /*var scale = Math.min( 
+            availableWidth / contentWidth, 
+            availableHeight / contentHeight 
+            );*/
+        </script>
 
     </body> 
 </html>
