@@ -145,7 +145,8 @@ nav .fa-solid{
 
 /*About Me*/
 .about-me{
-    min-height: 100vh;
+    min-height: 70vh;
+    padding-bottom: 10vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -221,7 +222,7 @@ nav .fa-solid{
 
 /*Experience*/
 .exp{
-    min-height: 80vh;
+    min-height: 50vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -287,7 +288,7 @@ nav .fa-solid{
 
 /*Projects*/
 .projects{
-    min-height: 120vh;
+    min-height: 80vh;
     height: auto;
     width: 100%;
     position: relative;
@@ -409,64 +410,48 @@ nav .fa-solid{
     left: 50%;
     transform: translateX(-50%);
 }
-.other-projects-text p2 a{ /* Left */
+.other-projects-text p2 a{          /*Left*/
     position: relative;
-    top: 5em;
+    top: 18em;
     left: 50%;
-    transform: translateX(-290%);
-    text-align: center;
-    text-decoration: none;
+    transform: translateX(-300%);
     width: 20em;
     height:20em;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 10px;
     color: #b7c5d3;
     display: inline-block;
     border: 2px solid transparent;
     border-radius: 5px;
     background: #2F4858;
+    margin: 0;
 }
-.other-projects-text p3 a{ /* Middle */
-    position: relative;
-    top: 5em;
-    left: 50%;
-    transform: translateX(-285%);
-    text-align: center;
-    text-decoration: none;
-    text-decoration: none;
-    width: 20em;
-    height:20em;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 10px;
-    color: #b7c5d3;
+.other-projects-text p2 span{
+    background: transparent;
     display: inline-block;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background: #2F4858;
+    position: relative;
+    text-decoration: none;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1,25;
+    font-size: 24px;
+    font-weight: 500;
 }
-.other-projects-text p4 a{ /* Right */
-    position: relative;
-    top: 5em;
-    left: 50%;
-    transform: translateX(-280%);
-    text-align: center;
+.other-projects-text p2:hover{
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.other-projects-text p2 span:hover{
+    color:#82FFD8;
+    opacity: 1;
+    transition: 0.75s;
+}
+.other-projects-text p3{
+    background: transparent;
+    text-align: left;
     text-decoration: none;
-    text-decoration: none;
-    width: 20em;
-    height:20em;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 10px;
-    color: #b7c5d3;
     display: inline-block;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background: #2F4858;
+    position: relative;
+    left: 0.75em;
+    inline-size: 20em;
 }
 
 /*------------------------------------------------------------------*/
@@ -480,6 +465,7 @@ nav .fa-solid{
 }
 .contact-text{
     min-height: 60vh;
+    padding-bottom: 20vh;
     height: auto;
     position:relative;
     display: inline-block;
@@ -771,6 +757,7 @@ nav .fa-solid{
         display: inline-block;
         min-width: 37.5em;
         min-height: 100vh;
+        padding-bottom: 30vh;
         width: 100%;
         height: auto;
         top: 20vh;
@@ -840,13 +827,12 @@ nav .fa-solid{
     }
     /*Other  projects*/
     .other-projects{
-        min-height: 140vh;
+        min-height: 100vh;
         height: 100vh;
         width: auto;
         position: relative;
         overflow: hidden;
         padding-top: 5vh;
-        padding-bottom: 20vh;
     }
     .other-projects-text p1{
         display: inline-block;
@@ -863,66 +849,21 @@ nav .fa-solid{
         top: 2em;
         left: 50%;
         transform: translateX(-50%);
-        text-align: center;
-        text-decoration: none;
-        width: 18em;
-        height:18em;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        padding: 10px;
+        width: 20em;
+        height:20em;
         color: #b7c5d3;
         display: inline-block;
         border: 2px solid transparent;
         border-radius: 5px;
         background: #2F4858;
-    }
-    .other-projects-text p3 a{ /* Middle */
-        position: relative;
-        top: 4em;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        text-decoration: none;
-        text-decoration: none;
-        width: 18em;
-        height:18em;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        padding: 10px;
-        color: #b7c5d3;
-        display: inline-block;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        background: #2F4858;
-    }
-    .other-projects-text p4 a{ /* Right */
-        position: relative;
-        top: 6em;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        text-decoration: none;
-        text-decoration: none;
-        width: 18em;
-        height:18em;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        padding: 10px;
-        color: #b7c5d3;
-        display: inline-block;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        background: #2F4858;
+        margin: 5;
     }
 
         /*About me*/
     .contact-text{
         position:relative;
         display: inline-block;
-        min-height: 100vh;
+        min-height: 80vh;
         width: auto;
         top: 10vh;
         left: 0vw;
