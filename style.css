@@ -454,6 +454,50 @@ nav .fa-solid{
     inline-size: 20em;
 }
 
+.other-projects-text p4 a{          /*Right*/
+    position: relative;
+    top: 18em;
+    left: 50%;
+    transform: translateX(-295%);
+    width: 20em;
+    height:20em;
+    color: #b7c5d3;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: #2F4858;
+    margin: 0;
+}
+.other-projects-text p4 span{
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1,25;
+    font-size: 24px;
+    font-weight: 500;
+}
+.other-projects-text p4:hover{
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.other-projects-text p4 span:hover{
+    color:#82FFD8;
+    opacity: 1;
+    transition: 0.75s;
+}
+.other-projects-text p5{
+    background: transparent;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    left: 0.75em;
+    inline-size: 20em;
+}
+
 /*------------------------------------------------------------------*/
 
 /*About me*/
@@ -848,6 +892,20 @@ nav .fa-solid{
     .other-projects-text p2 a{ /* Left */
         position: relative;
         top: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20em;
+        height:20em;
+        color: #b7c5d3;
+        display: inline-block;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        background: #2F4858;
+        margin: 5;
+    }
+    .other-projects-text p4 a{ /* Left */
+        position: relative;
+        top: 3em;
         left: 50%;
         transform: translateX(-50%);
         width: 20em;
