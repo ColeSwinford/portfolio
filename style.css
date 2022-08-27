@@ -293,7 +293,7 @@ nav .fa-solid{
     width: 100%;
     position: relative;
     overflow: hidden;
-    display: inline-block;
+    display: inliine-block;
 }
 .projects-text{
     position:relative;
@@ -329,7 +329,7 @@ nav .fa-solid{
     font-weight: 400;
     line-height: 1.5;
     color: #b7c5d3;
-    display: inline-block;
+    display: flex;
     width: 29em;
 }
 .projects-text p5{
@@ -795,7 +795,7 @@ nav .fa-solid{
         text-decoration: none;
     }
     .projects-text p4{
-        display: inline-block;
+        display: flex;
         width: 50%;
         height: 50%;
         position: relative;
@@ -803,7 +803,6 @@ nav .fa-solid{
         font-weight: 400;
         line-height: 1.5;
         color: #b7c5d3;
-        display: inline-block;
     }
     .projects-text p5{
         font-size: 18px;
@@ -856,7 +855,7 @@ nav .fa-solid{
         padding-bottom: 5em;
     }
     .other-projects p1{
-        display: inline-block;
+        display: flex;
         text-align: left;
         font-size: 40px;
         line-height: 1.5;
