@@ -392,15 +392,16 @@ nav .fa-solid{
 
 /*------------------------------------------------------------------*?
 
-/*Other  projects*/
+/*Other projects*/
 .other-projects{
     min-height: 80vh;
-    height: auto;
+    height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
+    padding-top: 5em;
 }
-.other-projects-text p1{
+.other-projects p1{
     display: inline-block;
     text-align: center;
     font-size: 40px;
@@ -410,57 +411,26 @@ nav .fa-solid{
     left: 50%;
     transform: translateX(-50%);
 }
-.other-projects-text p2 a{          /*Left*/
-    position: relative;
-    top: 18em;
-    left: 50%;
-    transform: translateX(-300%);
-    width: 20em;
-    height:20em;
-    color: #b7c5d3;
-    display: inline-block;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background: #2F4858;
-    margin: 0;
-}
-.other-projects-text p2 span{
-    background: transparent;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 1,25;
-    font-size: 24px;
-    font-weight: 500;
-}
-.other-projects-text p2:hover{
-    opacity: 0.9;
-    transition: 0.5s;
-}
-.other-projects-text p2 span:hover{
-    color:#82FFD8;
-    opacity: 1;
-    transition: 0.75s;
-}
-.other-projects-text p3{
-    background: transparent;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    left: 0.75em;
-    inline-size: 20em;
-}
 
-.other-projects-text p4 a{          /*Right*/
+/*Cards*/
+.other-projects-card-container{
+    display: grid;
     position: relative;
-    top: 18em;
-    left: 50%;
-    transform: translateX(-295%);
+    grid-template-columns: 0em 0em auto auto;
+    grid-auto-flow: row dense;
+    gap: 21em;
+    left: 17.25%;
+}
+.other-projects-card-container a{
+    text-decoration: none;
+}
+.other-projects-card{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    top: 2em;
     width: 20em;
-    height:20em;
+    height: 20em;
     color: #b7c5d3;
     display: inline-block;
     border: 2px solid transparent;
@@ -468,34 +438,41 @@ nav .fa-solid{
     background: #2F4858;
     margin: 0;
 }
-.other-projects-text p4 span{
-    background: transparent;
-    display: inline-block;
+.other-projects-card span{
+    background: #2F4858;
+    display: inline-grid;
     position: relative;
     text-decoration: none;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 1,25;
+    text-align: center;
+    padding-top: 2em;
+    color: #b7c5d3;
+    line-height: 1.25;
     font-size: 24px;
     font-weight: 500;
+    inline-size: 100%;
 }
-.other-projects-text p4:hover{
+.other-projects-card p1{
+    background: #2F4858;
+    display: inline-grid;
+    position: relative;
+    text-decoration: none;
+    text-align: left;
+    padding-top: 2em;
+    padding-inline: 0.5em;
+    color: #b7c5d3;
+    line-height: 1.25;
+    font-size: 16px;
+    inline-size: 95%;
+    font-weight: 400;
+}
+.other-projects-card:hover{
     opacity: 0.9;
-    transition: 0.5s;
+    transition: 0.75s;
 }
-.other-projects-text p4 span:hover{
+.other-projects-card span:hover{
     color:#82FFD8;
     opacity: 1;
     transition: 0.75s;
-}
-.other-projects-text p5{
-    background: transparent;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    left: 0.75em;
-    inline-size: 20em;
 }
 
 /*------------------------------------------------------------------*/
@@ -611,11 +588,7 @@ nav .fa-solid{
 
 /*------------------------------------------------------------------*/
 
-/*Resume*/
-
-
-
-/*Mobile support og=700px*/
+/*Mobile support og max-width=700px*/
 @media(max-width: 800px){
     /*Title text*/
     .text-box{
@@ -798,7 +771,7 @@ nav .fa-solid{
 
     /*Projects*/
     .projects-text{
-        position:relative;
+        position: relative;
         display: inline-block;
         min-width: 37.5em;
         min-height: 100vh;
@@ -870,55 +843,82 @@ nav .fa-solid{
         border-radius: 5px;
         background: #2F4858;
     }
-    /*Other  projects*/
+
+    /*Other projects*/
     .other-projects{
-        min-height: 100vh;
-        height: 100vh;
-        width: auto;
+        min-height: 80vh;
+        height: 100%;
+        width: 100%;
         position: relative;
         overflow: hidden;
-        padding-top: 5vh;
+        padding-top: 5em;
+        padding-left: 5vw;
+        padding-bottom: 5em;
     }
-    .other-projects-text p1{
+    .other-projects p1{
         display: inline-block;
-        text-align: center;
-        font-size: 26px;
+        text-align: left;
+        font-size: 40px;
         line-height: 1.5;
         color: #b7c5d3;
         position: relative;
+    }
+    /*Cards*/
+    .other-projects-card-container{
+        display: flex;
+        position: relative;
+        grid-template-columns: 0em 0em auto auto;
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        gap: 2em;
         left: 50%;
         transform: translateX(-50%);
     }
-    .other-projects-text p2 a{ /* Left */
+    .other-projects-card-container a{
+        text-decoration: none;
+    }
+    .other-projects-card{
         position: relative;
         top: 2em;
-        left: 50%;
-        transform: translateX(-50%);
         width: 20em;
-        height:20em;
+        height: 20em;
         color: #b7c5d3;
-        display: inline-block;
+        display: -ms-inline-grid;
         border: 2px solid transparent;
         border-radius: 5px;
         background: #2F4858;
-        margin: 5;
+        margin: 0;
     }
-    .other-projects-text p4 a{ /* Left */
-        position: relative;
-        top: 3em;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 20em;
-        height:20em;
-        color: #b7c5d3;
-        display: inline-block;
-        border: 2px solid transparent;
-        border-radius: 5px;
+    .other-projects-card span{
         background: #2F4858;
-        margin: 5;
+        display: inline-grid;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 2em;
+        color: #b7c5d3;
+        line-height: 1.25;
+        font-size: 24px;
+        font-weight: 500;
+        inline-size: 100%;
+    }
+    .other-projects-card p1{
+        background: #2F4858;
+        display: inline-grid;
+        position: relative;
+        text-decoration: none;
+        text-align: left;
+        padding-top: 2em;
+        padding-inline: 0.5em;
+        color: #b7c5d3;
+        line-height: 1.25;
+        font-size: 16px;
+        inline-size: 95%;
+        font-weight: 400;
     }
 
-        /*About me*/
+    /*About me*/
     .contact-text{
         position:relative;
         display: inline-block;
