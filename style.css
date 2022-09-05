@@ -38,7 +38,20 @@ nav{
     padding: 2% 4%;
     justify-content: space-between;
     align-items: center;
+
+    animation: slide-left 0.5s ease-in-out;
 }
+@keyframes slide-left {
+    from{
+        margin-left: 104%;
+        width: 100%; 
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 .nav-links{
     flex: 1;
     text-align: right;
@@ -89,6 +102,19 @@ nav{
     padding-inline: 20px;
     word-wrap: break-word;
     padding-bottom: 60vh;
+
+    overflow: hidden;
+    animation: 0.5s slide-right;
+}
+@keyframes slide-right{
+    from{
+        margin-left: -100%;
+        width: 100%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 .text-box pHi{
@@ -96,18 +122,21 @@ nav{
     font-weight: 300;
     color: #82FFD8;
 }
+
 .text-box pName{
     font-size: 80px;
     font-weight: 600;
     line-height: 0.8;
     color: #D3E1EF;
 }
+
 .text-box pTagline{
     font-size: 72px;
     font-weight: 500;
     line-height: 1.5;
     color: #B7C5D3;
 }
+
 .text-box p{
     font-size: 18px;
     inline-size: 30em;
@@ -130,6 +159,7 @@ nav{
     background: transparent;
     cursor: pointer;
 }
+
 .welcome-btn:hover{
     border: 1px solid #82FFD8;
     background: #82FFD8;
@@ -902,7 +932,7 @@ nav .fa-solid{
         text-decoration: none;
         text-align: center;
         padding-top: 2em;
-        color: #b7c5d3;
+        color: #82FFD8;
         line-height: 1.25;
         font-size: 24px;
         font-weight: 500;
