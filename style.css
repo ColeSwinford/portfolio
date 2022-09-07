@@ -43,7 +43,7 @@ nav{
 }
 @keyframes slide-left {
     from{
-        margin-left: 104%;
+        margin-left: 100%;
         width: 100%; 
     }
     to{
@@ -104,7 +104,7 @@ nav{
     padding-bottom: 60vh;
 
     overflow: hidden;
-    animation: 0.5s slide-right;
+    animation: 1s slide-right;
 }
 @keyframes slide-right{
     from{
