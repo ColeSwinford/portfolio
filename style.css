@@ -511,6 +511,12 @@ nav .fa-solid{
     inline-size: 95%;
     font-weight: 400;
 }
+.other-projects-card p1 i{
+    background: transparent;
+    position: relative;
+    text-align: right;
+    top: -1.25em;
+}
 .other-projects-card:hover{
     background-color: #82FFD8;
     transition: 0.75s;
@@ -525,6 +531,10 @@ nav .fa-solid{
     transition: 0.75s;
 }
 .other-projects-card:hover p1{
+    color: #2F4858;
+    transition: 0.75s;
+}
+.other-projects-card:hover p1 i{
     color: #2F4858;
     transition: 0.75s;
 }
