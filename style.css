@@ -516,6 +516,10 @@ nav .fa-solid{
     transition: 0.75s;
     cursor: pointer;
 }
+.other-projects-card:hover img{
+    transform: scale(0.975);
+    transition: 0.75s;
+}
 .other-projects-card:hover span{
     color: #2F4858;
     transition: 0.75s;
@@ -524,6 +528,7 @@ nav .fa-solid{
     color: #2F4858;
     transition: 0.75s;
 }
+
 
 /*------------------------------------------------------------------*/
 
