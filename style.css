@@ -459,6 +459,7 @@ nav .fa-solid{
 }
 .other-projects-card-container a{
     text-decoration: none;
+    background: transparent;
 }
 .other-projects-card{
     grid-row-start: 1;
@@ -470,30 +471,39 @@ nav .fa-solid{
     color: #b7c5d3;
     display: inline-block;
     border: 2px solid transparent;
-    border-radius: 5px;
-    background: #2F4858;
+    border-radius: 15px;
+    background-color: #2F4858;
+    margin: 0;
+}
+.other-projects-card img{
+    width: 20em;
+    height: 11.25em;
+    border-radius: 15px;
+    padding: 0;
     margin: 0;
 }
 .other-projects-card span{
-    background: #2F4858;
-    display: inline-grid;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    padding-top: 2em;
-    color: #b7c5d3;
-    line-height: 1.25;
-    font-size: 24px;
-    font-weight: 500;
-    inline-size: 100%;
-}
-.other-projects-card p1{
-    background: #2F4858;
+    background: transparent;
     display: inline-grid;
     position: relative;
     text-decoration: none;
     text-align: left;
-    padding-top: 2em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-inline: 0.3em;
+    width: auto;
+    color: #b7c5d3;
+    line-height: 1.25;
+    font-size: 24px;
+    font-weight: 500;
+    inline-size: auto;
+}
+.other-projects-card p1{
+    background: transparent;
+    display: inline-grid;
+    position: relative;
+    text-decoration: none;
+    text-align: left;
     padding-inline: 0.5em;
     color: #b7c5d3;
     line-height: 1.25;
@@ -502,12 +512,16 @@ nav .fa-solid{
     font-weight: 400;
 }
 .other-projects-card:hover{
-    opacity: 0.9;
+    background-color: #82FFD8;
+    transition: 0.75s;
+    cursor: pointer;
+}
+.other-projects-card:hover span{
+    color: #2F4858;
     transition: 0.75s;
 }
-.other-projects-card span:hover{
-    color:#82FFD8;
-    opacity: 1;
+.other-projects-card:hover p1{
+    color: #2F4858;
     transition: 0.75s;
 }
 
