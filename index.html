@@ -18,6 +18,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/775bea9375.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
         <!--Home Page-->
@@ -92,7 +93,7 @@
                 <p4>As an avid supporter of Free and Open-Source Software (FOSS), all my projects are open-source (including this website!)<br><br></p4>
                 <p5><br>featured project<br></p5>
                 <p6><a href="https://github.com/ColeSwinford/Python--EZ-Hotkey">EZ Hotkey<br></a></p6>
-                <p7>A free, open-source, and easy-to-use hotkey program for Windows. This .exe file written in Python allows users to quickly define an input (hotkey) and an output (action upon input actuation). EZ Hotkey stays alive when minimized, so you can keep using your hotkeys!</p7>
+                <p7>Easy-to-use hotkey program for Windows. This .exe file written in Python allows users to quickly define an input (hotkey) and an output (action upon input actuation). EZ Hotkey stays alive when minimized, so you can keep using your hotkeys!</p7>
                 <img class="EZHotkey" viewBox="0 0 auto auto" preserveAspectRatio="meet" src="images/EZ Hotkey.svg">
             </div>
         </section>
@@ -101,6 +102,12 @@
         <section class="other-projects">
             <p1>other noteworthy projects</p1>
             <div class="other-projects-card-container">
+                <a href="https://www.zenodoro.com/"><div class="other-projects-card">
+                    <img src="images/zenodoro.png">
+                    <span>Zenodoro</span>
+                    <p1>Relaxing, zen-themed pomodoro timer
+                    <br><br><br>HTML &emsp; CSS &emsp; JavaScript <i class="fa-solid fa-globe"></i></p1>
+                </div></a>
                 <a href="https://github.com/ColeSwinford/Python--Funky-Monkey-Friday-Bot"><div class="other-projects-card">
                     <img src="images/FMF.png">
                     <span>Funky Monkey Friday</span>
@@ -111,7 +118,7 @@
                     <img src="images/phoneBook.png">
                     <span>Phone Book</span>
                     <p1>Command line Phone Book
-                    <br><br><br>C <i class="fa-brands fa-github"></i></p1>
+                    <br><br><br>C <i class="fa-brands fa-github " aria-hidden="true"></i></p1>
                 </div></a>
             </div>
         </section>
@@ -131,6 +138,7 @@
                 </ul>
             </div>
         </section>
+
         <!--Footer-->
         <section class="footer">
             <div class="footer-text">
@@ -138,28 +146,8 @@
             </div>
         </section>
 
-        <script>
-            //Nav bar
-            var nav = document.getElementById("navBar");
-            function showMenu(){
-                nav.style.right = "0";
-            }
-            function hideMenu(){
-                nav.style.right = "-200px";
-            }
-
-            //Copy email
-            function copyEmail(){
-                var copyText = "site.coleswinford@gmail.com";
-                navigator.clipboard.writeText(copyText);
-                alert("Copied the text: " + '"'+copyText+'"' + " to clipboard.");
-            }
-
-            /*var scale = Math.min( 
-            availableWidth / contentWidth, 
-            availableHeight / contentHeight 
-            );*/
-        </script>
+        <!--JavaScript-->
+        <script src="main.js"></script>
 
     </body> 
 </html>
