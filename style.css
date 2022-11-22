@@ -402,7 +402,7 @@ nav .fa-solid{
     transform: scaleX(0.75);
     transform-origin: bottom left;
 }
-.projects-text img.EZHotkey{
+.projects-text img.featured{
     position: relative;
     top: -15vh;
     left: 25vw;
@@ -840,7 +840,7 @@ nav .fa-solid{
         display: inline-block;
         min-width: 37.5em;
         min-height: 100vh;
-        padding-bottom: 30vh;
+        padding-bottom: 10vh;
         width: 100%;
         height: auto;
         top: 20vh;
@@ -883,18 +883,18 @@ nav .fa-solid{
         text-decoration: none;
         position: relative;
     }
-    .projects-text img.EZHotkey{
+    .projects-text img.featured{
         align-self: center;
         display: inline-block;
         width: 52%;
         height: 52%;
         position: relative;
-        top: -10em;
+        top: -1em;
         left: 0em;
     }
     .projects-text p7{
         position: relative;
-        top: 16em;
+        top: 14em;
         left: 0em;
         width:48%;
         font-size: 16px;
