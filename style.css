@@ -150,7 +150,7 @@ nav{
     text-decoration: none;
     color: #b7c5d3;
     border: 1px solid #b7c5d3;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 12px 55px;
     font-size: 18px;
     position: relative;
@@ -407,7 +407,7 @@ nav .fa-solid{
     position: relative;
     top: -15vh;
     left: 25vw;
-    border-radius: 10px;
+    border-radius: 25px;
     inline-size: 40em;
 }
 .projects-text p7{
@@ -472,14 +472,14 @@ nav .fa-solid{
     color: #b7c5d3;
     display: inline-block;
     border: 2px solid transparent;
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: #2F4858;
     margin: 0;
 }
 .other-projects-card img{
     width: 20em;
     height: 11.25em;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 0;
     margin: 0;
 }
@@ -699,7 +699,7 @@ nav .fa-solid{
         text-decoration: none;
         color: #b7c5d3;
         border: 1px solid #82FFD8;
-        border-radius: 5px;
+        border-radius: 25px;
         padding: 12px 55px;
         font-size: 18px;
         position: relative;
@@ -825,7 +825,7 @@ nav .fa-solid{
         color: #b7c5d3;
         border: 2px solid #2F4858;
         border-left: 2px solid #82FFD8;
-        border-radius: 2px;
+        border-radius: 5px;
         padding: 5px 10px;
         font-size: 18px;
         cursor: pointer;
@@ -952,14 +952,14 @@ nav .fa-solid{
         color: #b7c5d3;
         display: inline-block;
         border: 2px solid transparent;
-        border-radius: 15px;
+        border-radius: 25px;
         background-color: #2F4858;
         margin: 0;
     }
     .other-projects-card img{
         width: 20em;
         height: 11.25em;
-        border-radius: 15px;
+        border-radius: 25px;
         padding: 0;
         margin: 0;
     }
