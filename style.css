@@ -260,10 +260,11 @@ nav .fa-solid{
 /*Experience*/
 .exp{
     min-height: 50vh;
-    height: auto;
+    height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
+    padding-bottom: 5vh;
 }
 .exp-title{
     position:relative;
