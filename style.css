@@ -326,7 +326,7 @@ nav .fa-solid{
     display: inline-block;
     top: 17.5vh;
     left: 17.5vw;
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 #title-display{
@@ -372,8 +372,14 @@ nav .fa-solid{
 #desc-display{
     position: absolute;
     display: inline-flex;
-    top: 10vh;
+    inline-size: 25vw;
+    top: 8vh;
+    left: 0.75vw;
     color: #B7C5D3;
+    line-height: 2;
+}
+#desc-display ul li::marker{
+    color: #82FFD8;
 }
 
 /*------------------------------------------------------------------*?
