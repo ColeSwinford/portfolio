@@ -916,11 +916,18 @@ nav .fa-solid{
         height: 100%;
         width: 100%;
     }
-    #company-display{
+    #title-display{
         position: absolute;
         display: inline-flex;
         inline-size: 90%;
-        top: 6vh;
+        color: #D3E1EF;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    #company-display{
+        position: absolute;
+        display: inline-flex;
+        top: 5vh;
         color: #82FFD8;
     }
     #company-display a:after{
