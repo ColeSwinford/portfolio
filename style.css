@@ -260,10 +260,11 @@ nav .fa-solid{
 /*Experience*/
 .exp{
     min-height: 50vh;
-    height: auto;
+    height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
+    padding-bottom: 10vh;
 }
 .exp-title{
     position:relative;
@@ -305,20 +306,80 @@ nav .fa-solid{
     top: 10vh;
     left: 20vw;
 }
-.company1{
+.companies a{
     text-decoration: none;
     font-size: 12px;
     color: #b7c5d3;
     border: 2px solid #2F4858;
-    border-left: 2px solid #82FFD8;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 18px;
     cursor: pointer;
 }
-.company1:hover{
+.companies a:hover{
     background: #2F4858;
+    border-left: 2px solid #82FFD8;
     transition: 1s;
+}
+#exp-container{
+    position: absolute;
+    display: inline-block;
+    top: 17.5vh;
+    left: 17.5vw;
+    height: 100%;
+    width: 100%;
+}
+#title-display{
+    position: absolute;
+    display: inline-flex;
+    color: #D3E1EF;
+    font-size: 32px;
+    font-weight: 500;
+}
+#company-display{
+    position: absolute;
+    display: inline-flex;
+    top: 4vh;
+    color: #82FFD8;
+}
+#company-display a:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+    position: absolute;
+}
+#company-display a:hover:after{
+    content: '';
+    width: 25%;
+    height: 2px;
+    background: #82FFD8;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+#dates-display{
+    position: absolute;
+    display: inline-flex;
+    top: 4vh;
+    left: 8vw;
+    color: #B7C5D3;
+}
+#desc-display{
+    position: absolute;
+    display: inline-flex;
+    inline-size: 25vw;
+    top: 8vh;
+    left: 0.75vw;
+    color: #B7C5D3;
+    line-height: 2;
+}
+#desc-display ul li::marker{
+    color: #82FFD8;
 }
 
 /*------------------------------------------------------------------*?
