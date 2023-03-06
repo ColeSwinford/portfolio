@@ -24,7 +24,7 @@ function changeText(id) {
     var title = "";
     switch (id) {
       case "iGear":
-        title = "Software Engineer Co-op";
+        title = "Software Solutions Engineer Co-op";
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "January - May 2023"
