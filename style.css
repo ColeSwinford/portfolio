@@ -927,7 +927,7 @@ nav .fa-solid{
     #company-display{
         position: absolute;
         display: inline-flex;
-        top: 5vh;
+        top: 8vh;
         color: #82FFD8;
     }
     #company-display a:after{
@@ -953,7 +953,7 @@ nav .fa-solid{
     #dates-display{
         position: absolute;
         display: inline-flex;
-        top: 9vh;
+        top: 11vh;
         left: 0vw;
         color: #B7C5D3;
     }
@@ -961,7 +961,7 @@ nav .fa-solid{
         position: absolute;
         display: inline-flex;
         inline-size: 80%;
-        top: 12vh;
+        top: 14vh;
         left: 4vw;
         color: #B7C5D3;
         line-height: 1.5;
