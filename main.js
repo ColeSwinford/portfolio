@@ -23,20 +23,21 @@ function changeText(id) {
     bullet5 = null;
     var title = "";
     switch (id) {
-      case "iGear":
-        title = "Software Solutions Engineer Co-op";
+      case "iGear Co-op I":
+        title = "Software Engineer Co-op I";
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "January - May 2023"
         bullet1 = "Fullstack Windows development with C#, XAML";
         bullet2 = "Android Studio with Kotlin and Markup";
         break;
-      case "company2":
-        title = "title 2";
-        company = "company 2"
-        link = "link 2"
-        dates = "dates 2"
-        bullet1 = "desc 2";
+      case "iGear Co-op II":
+        title = "Software Engineer Co-op II";
+        company = "iGear"
+        link = "https://www.igear.com/"
+        dates = "August 2023 - Present"
+        bullet1 = "Fullstack Windows development with C#, XAML";
+        bullet2 = "Docker, Kubernetes";
         break;
       case "company3":
         title = "title 3";
@@ -74,7 +75,7 @@ function changeText(id) {
 }
 
 // Display current company on page load
-changeText('iGear');
+changeText('iGear Co-op II');
 
 
 /*var scale = Math.min( 
