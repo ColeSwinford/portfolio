@@ -28,7 +28,7 @@ function changeText(id) {
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "January - May 2023"
-        bullet1 = "Fullstack Windows development with C#, XAML";
+        bullet1 = "Fullstack Windows development with .NET using C#, XAML";
         bullet2 = "Android Studio with Kotlin and Markup";
         break;
       case "iGear Co-op II":
@@ -36,7 +36,7 @@ function changeText(id) {
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "August 2023 - Present"
-        bullet1 = "Fullstack Windows development with C#, XAML";
+        bullet1 = "Fullstack Windows development with .NET using C#, XAML";
         bullet2 = "Docker, Kubernetes";
         break;
       case "company3":
