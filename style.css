@@ -837,13 +837,21 @@ nav .fa-solid{
         position:relative;
         display: inline-block;
         min-height: 100vh;
-        width: auto;
+        width: 95%;
         height: auto;
         top: 10vh;
         left: 0vw;
         color: #b7c5d3;
         word-wrap: break-word;
         padding-bottom: 10vh;
+    }
+    .about-text ul{
+        display: inline-block;
+        margin: 0.5em;
+        line-height: 1.5;
+        columns: 2;
+        -webkit-columns: 1;
+        -moz-columns: 1;
     }
 
     /*Experience*/

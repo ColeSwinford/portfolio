@@ -36,7 +36,7 @@ function changeText(id) {
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "August 2023 - Present"
-        bullet1 = "Fullstack Windows development with .NET using C#, XAML";
+        bullet1 = "React framework: HTML, CSS, TypeScript, and JavaScript";
         bullet2 = "Docker, Kubernetes";
         break;
       case "company3":
