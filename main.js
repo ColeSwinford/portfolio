@@ -38,7 +38,7 @@ function changeText(id) {
         dates = "August 2023 - Present"
         bullet1 = "Docker, Kubernetes";
         bullet2 = "ASP .NET Razor/Blazor frameworks";
-        bullet3 = "Microsoft Teams Adaptive Cards using Markup and Typescript";
+        bullet3 = "Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#";
         break;
       case "company3":
         title = "title 3";
