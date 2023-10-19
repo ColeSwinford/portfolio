@@ -37,7 +37,7 @@ function changeText(id) {
         link = "https://www.igear.com/"
         dates = "August 2023 - Present"
         bullet1 = "Docker, Kubernetes";
-        bullet2 = "ASP .NET Razor/Blazor frameworks";
+        bullet2 = "ASP .NET Razor/Blazor frameworks using HTML, CSS, JavaScript, and C#";
         bullet3 = "Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#";
         break;
       case "company3":
