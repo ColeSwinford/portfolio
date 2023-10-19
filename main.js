@@ -28,16 +28,17 @@ function changeText(id) {
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "January - May 2023"
-        bullet1 = "Fullstack Windows development with .NET using C#, XAML";
-        bullet2 = "Android Studio with Kotlin and Markup";
+        bullet1 = "Android Studio with Kotlin and Markup";
+        bullet2 = "Fullstack Windows development with .NET using C#, XAML";
         break;
       case "iGear Co-op II":
         title = "Software Engineer Co-op II";
         company = "iGear"
         link = "https://www.igear.com/"
         dates = "August 2023 - Present"
-        bullet1 = "React framework: HTML, CSS, TypeScript, and JavaScript";
-        bullet2 = "Docker, Kubernetes";
+        bullet1 = "Docker, Kubernetes";
+        bullet2 = "ASP .NET Razor/Blazor frameworks";
+        bullet3 = "Microsoft Teams Adaptive Cards using Markup and Typescript";
         break;
       case "company3":
         title = "title 3";
