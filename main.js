@@ -27,7 +27,7 @@ function changeText(id) {
         title = "Software Engineer Co-op I";
         company = "iGear"
         link = "https://www.igear.com/"
-        dates = "January - May 2023"
+        dates = "January-May 2023"
         bullet1 = "Android Studio with Kotlin and Markup";
         bullet2 = "Fullstack Windows development with .NET using C#, XAML";
         break;
@@ -35,17 +35,23 @@ function changeText(id) {
         title = "Software Engineer Co-op II";
         company = "iGear"
         link = "https://www.igear.com/"
-        dates = "August 2023 - Present"
+        dates = "August-December 2023"
         bullet1 = "Docker, Kubernetes";
         bullet2 = "ASP .NET Razor/Blazor frameworks using HTML, CSS, JavaScript, and C#";
         bullet3 = "Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#";
         break;
-      case "company3":
-        title = "title 3";
-        company = "company 3"
-        link = "link 3"
-        dates = "dates 3"
-        bullet1 = "desc 3";
+      case "iGear Co-op III":
+        title = "Software Engineer Co-op III";
+        company = "iGear"
+        link = "https://www.igear.com/"
+        dates = "May-August 2024"
+        break;
+      case "company n":
+        title = "title n";
+        company = "company n"
+        link = "link n"
+        dates = "dates n"
+        bullet1 = "desc n";
         break;
     }
     document.getElementById("title-display").innerHTML = title;
