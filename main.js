@@ -23,28 +23,32 @@ function changeText(id) {
     bullet5 = null;
     var title = "";
     switch (id) {
-      case "iGear Co-op I":
+      case "IGear Co-op I":
         title = "Software Engineer Co-op I";
-        company = "iGear"
-        link = "https://www.igear.com/"
+        company = "IGear"
+        link = "https://www.IGear.com/"
         dates = "January-May 2023"
         bullet1 = "Android Studio with Kotlin and Markup";
-        bullet2 = "Fullstack Windows development with .NET using C#, XAML";
+        bullet2 = "Fullstack Windows development using .NET with C#";
+        bullet3 = "Prototyping implentations of new technology";
         break;
-      case "iGear Co-op II":
+      case "IGear Co-op II":
         title = "Software Engineer Co-op II";
-        company = "iGear"
-        link = "https://www.igear.com/"
+        company = "IGear"
+        link = "https://www.IGear.com/"
         dates = "August-December 2023"
         bullet1 = "Docker, Kubernetes";
         bullet2 = "ASP .NET Razor/Blazor frameworks using HTML, CSS, JavaScript, and C#";
         bullet3 = "Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#";
+        bullet4 = "Building foundation of Microsoft Teams integration feature for flagship Squeaks product";
         break;
-      case "iGear Co-op III":
+      case "IGear Co-op III":
         title = "Software Engineer Co-op III";
-        company = "iGear"
-        link = "https://www.igear.com/"
+        company = "IGear"
+        link = "https://www.IGear.com/"
         dates = "May-August 2024"
+        bullet1 = "Fullstack Windows development using .NET with C#";
+        bullet2= "Enhancing new features of flagship Squeaks product";
         break;
       case "company n":
         title = "title n";
@@ -82,7 +86,7 @@ function changeText(id) {
 }
 
 // Display current company on page load
-changeText('iGear Co-op II');
+changeText('IGear Co-op II');
 
 
 /*var scale = Math.min( 
