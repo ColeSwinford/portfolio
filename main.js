@@ -15,13 +15,24 @@ function copyEmail(){
 }
 
 // Change experience display
-function changeText(id) {
+var selectedButton = null;
+function changeText(id, button) {
     bullet1 = null;
     bullet2 = null;
     bullet3 = null;
     bullet4 = null;
     bullet5 = null;
     var title = "";
+
+    // Remove the class from the previously selected button
+    if (selectedButton) {
+        selectedButton.classList.remove('selected');
+    }
+    
+    // Add the class to the currently selected button
+    button.classList.add('selected');
+    selectedButton = button;
+
     switch (id) {
       case "IGear Co-op I":
         title = "Software Engineer Co-op I";
@@ -84,9 +95,11 @@ function changeText(id) {
     list.innerHTML += "</ul>";
 }
 
-// Display current company on page load
-changeText('IGear Co-op II');
-
+// Set default experience on page load
+document.addEventListener("DOMContentLoaded", function() {
+  const defaultButton = document.querySelector('a[onclick*="IGear Co-op II"]');
+  changeText('IGear Co-op II', defaultButton);
+});
 
 /*var scale = Math.min( 
 availableWidth / contentWidth, 
