@@ -1175,7 +1175,7 @@ nav .fa-solid{
     /* Left underline animation */
     .contact-text p5 a::after{
         transition: 0.5s;
-        content: '(tap to copy)';
+        content: '(tap to copy and attempt mailto)';
         font-size: 14px;
         color: #b7c5d3;
         width: auto;
