@@ -28,27 +28,26 @@ function changeText(id) {
         company = "IGear"
         link = "https://www.IGear.com/"
         dates = "January-May 2023"
-        bullet1 = "Android Studio with Kotlin and Markup";
-        bullet2 = "Fullstack Windows development using .NET with C#";
-        bullet3 = "Prototyping implentations of new technology";
+        bullet1 = "Prototyped fullstack implementations of new technologies on Windows using .NET with C#";
+        bullet2 = "Debugged apps using Android Studio with Kotlin and Markup";
         break;
       case "IGear Co-op II":
         title = "Software Engineer Co-op II";
         company = "IGear"
         link = "https://www.IGear.com/"
         dates = "August-December 2023"
-        bullet1 = "Docker, Kubernetes";
-        bullet2 = "ASP .NET Razor/Blazor frameworks using HTML, CSS, JavaScript, and C#";
-        bullet3 = "Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#";
-        bullet4 = "Building foundation of Microsoft Teams integration feature for flagship Squeaks product";
+        bullet1 = "Built foundation of Microsoft Teams integration feature for flagship Squeaks product";
+        bullet2 = "Used Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#";
+        bullet3 = "Implemented products using Docker containers and Kubernetes";
+        bullet4 = "Built web apps using ASP .NET Razor/Blazor frameworks using HTML, CSS, JavaScript, and C#";
         break;
       case "IGear Co-op III":
         title = "Software Engineer Co-op III";
         company = "IGear"
         link = "https://www.IGear.com/"
         dates = "May-August 2024"
-        bullet1 = "Fullstack Windows development using .NET with C#";
-        bullet2= "Enhancing new features of flagship Squeaks product";
+        bullet1 = "Enhanced new features of the flagship Squeaks product and integration with Microsoft Teams";
+        bullet2 = "Used .NET with C# for fullstack Windows development";
         break;
       case "company n":
         title = "title n";
