@@ -7,11 +7,15 @@ function hideMenu(){
     nav.style.right = "-200px";
 }
 
-//Copy email
-function copyEmail(){
-    var copyText = "site.coleswinford@gmail.com";
-    navigator.clipboard.writeText(copyText);
-    alert("Copied the text: " + '"'+copyText+'"' + " to clipboard.");
+// Copy email and open mail client
+function copyEmailto() {
+  var copyText = "site.coleswinford@gmail.com";
+  navigator.clipboard.writeText(copyText).then(function() {
+      // Redirect to the mailto link
+      window.location.href = "mailto:" + copyText;
+  }).catch(function(error) {
+      console.error("Error copying text: ", error);
+  });
 }
 
 // Change experience display

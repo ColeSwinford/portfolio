@@ -673,7 +673,7 @@ nav .fa-solid{
     content: '';
     font-size: 16px;
     color: transparent;
-    width: 20%;
+    width: 25%;
     height: 2px;
     background: transparent;
     display: block;
@@ -681,7 +681,7 @@ nav .fa-solid{
     position: absolute;
 }
 .contact-text p5 a:hover::after{
-    content: 'copy to clipboard';
+    content: 'copy and attempt mailto';
     font-size: 16px;
     color: #b7c5d3;
     width: 35%;
