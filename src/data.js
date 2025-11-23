@@ -30,9 +30,10 @@ export const experience = [
         link: "https://www.siho.org/",
         dates: "June 2025 - Present",
         bullets: [
-            "Enhanced new features of the flagship Squeaks product and integration with Microsoft Teams",
-            "Used .NET with C# for fullstack Windows development"
-        ]
+"Architected internal platforms that automated manual workflows and boosted operational efficiency",
+            "Established CI/CD pipelines, transitioning the org from ad-hoc deployments to reliable releases",
+            "Translated complex insurance business logic into scalable, production-ready software solutions",
+            "Modernized legacy systems to reduce technical debt and improve codebase maintainability"        ]
     },
     {
         id: "IGear Co-op III",

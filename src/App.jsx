@@ -21,9 +21,6 @@ function App() {
       
       {/* --- Navigation --- */}
       <nav>
-        <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars-staggered'}`}></i>
-        </div>
         <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="#about" onClick={() => setIsMenuOpen(false)}>/about me</a></li>
           <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>/experience</a></li>
