@@ -12,7 +12,6 @@ function App() {
     alert("Email copied to clipboard!");
   };
   
-  // Helper function to split tech string into an array of tags
   const getTechTags = (techString) => {
     return techString.split(' • ').map(tag => tag.trim());
   };
@@ -38,13 +37,8 @@ function App() {
         <span className="hero-hi">Hi, my name is</span>
         <h1 className="hero-name">{personalInfo.name}.</h1>
         <h2 className="hero-tagline">{personalInfo.tagline}</h2>
-        
-        {/* Separator Line */}
         <div className="hero-line"></div>
-        
-        {/* Professional Title */}
         <p className="hero-subtitle">{personalInfo.role}</p>
-        
         <a href="#about" className="welcome-btn">about me</a>
       </section>
 
@@ -53,11 +47,9 @@ function App() {
         <div className="about-content">
           <span className="section-slash">/</span>
           <h2 className="section-heading">about me</h2>
-          
           <p className="about-lead">{personalInfo.bioTitle}</p>
           <p className="about-text">{personalInfo.bioP1}</p>
           <p className="about-text">{personalInfo.bioP2}</p>
-
           <h3 className="about-skills-title">Technologies & Tools</h3>
           <div className="skills-grid">
             {skills.map(skill => <span className="skill-tag" key={skill}>{skill}</span>)}
@@ -71,9 +63,7 @@ function App() {
           <span className="section-slash">/</span>
           <h2 className="section-heading">experience</h2>
         </div>
-
         <div className="exp-container">
-          {/* Tab List */}
           <ul className="exp-tabs">
             {experience.map(job => (
               <li key={job.id}>
@@ -86,8 +76,6 @@ function App() {
               </li>
             ))}
           </ul>
-
-          {/* Tab Content */}
           <div className="exp-details">
             <h3>{activeJob.title}</h3>
             <a href={activeJob.link} target="_blank" rel="noreferrer" className="exp-company">
@@ -111,42 +99,35 @@ function App() {
           <p className="about-lead" style={{fontSize:'28px'}}>A commitment to open-source</p>
         </div>
 
-        {/* FEATURED PROJECT STRUCTURE */}
         <a href={featuredProject.link} target="_blank" rel="noreferrer" className="featured-project" style={{textDecoration: 'none'}}>
-          
-          {/* Left Side: Text */}
           <div className="featured-content">
             <p className="featured-label">featured project</p>
             <h3 className="featured-title">{featuredProject.title}</h3>
             <p className="featured-desc">{featuredProject.description}</p>
             <div className="skills-grid" style={{marginTop: 'auto'}}>
-               {/* Zenodoro's tags */}
                {getTechTags("HTML • CSS • JavaScript").map(tag => (
                    <span className="skill-tag" key={tag} style={{fontSize:'12px'}}>{tag}</span>
                ))}
             </div>
           </div>
-
-          {/* Right Side: Image */}
           <div className="featured-img-container">
             <img src={featuredProject.image} alt={featuredProject.title} className="featured-img" />
           </div>
-          
         </a>
 
         <h3 className="grid-title">other noteworthy projects</h3>
         <div className="projects-grid">
           {projects.map((proj, i) => (
             <a href={proj.link} key={i} target="_blank" rel="noreferrer" className="project-card">
-              <img src={proj.image} alt={proj.title} className="card-img" />
+              <div className="card-img-container">
+                <img src={proj.image} alt={proj.title} className="card-img" />
+              </div>
               <div className="card-content">
                 <div className="card-title">
                   {proj.title}
                   <i className={proj.icon}></i>
                 </div>
                 <p>{proj.description}</p>
-                
-                {/* NEW TAGS: Rendering tech stack using the same pill/tag style */}
                 <div className="project-tags-wrapper">
                     {getTechTags(proj.tech).map(tag => (
                         <span className="skill-tag" key={tag} style={{fontSize:'12px', padding: '6px 12px', margin: '0'}}>{tag}</span>
@@ -158,22 +139,23 @@ function App() {
         </div>
       </section>
 
-      {/* --- Contact Section --- */}
+      {/* --- CONTACT SECTION --- */}
       <section id="contact">
         <div className="contact-content">
           <span className="section-slash">/</span>
           <h2 className="section-heading">contact</h2>
-          <p className="about-lead">Let's get in touch</p>
           
-          <div style={{marginTop: '4rem'}}>
-            <p className="accent">email</p>
+          <p className="contact-lead">Let's get in touch.</p>
+          
+          <div className="email-container">
+            <p className="email-label">email</p>
             <button onClick={copyEmail} className="email-btn">
               {personalInfo.email}
             </button>
           </div>
 
-          <div style={{marginTop: '3rem'}}>
-            <p className="accent">platforms</p>
+          <div className="contact-platforms">
+            <p className="label">platforms</p>
             <div className="contact-icons">
               <a href={personalInfo.socials.github} target="_blank" rel="noreferrer">
                 <i className="fa-brands fa-github"></i>
@@ -186,9 +168,9 @@ function App() {
         </div>
       </section>
 
-      {/* --- Footer --- */}
-      <footer style={{textAlign:'center', padding:'2rem', color:'var(--text-gray)'}}>
-        <p>designed and built by <br /> {personalInfo.name}</p>
+      {/* --- Footer Moved OUTSIDE of section to center correctly --- */}
+      <footer className="footer-text">
+        designed and built by<br />Cole Swinford
       </footer>
 
     </div>
