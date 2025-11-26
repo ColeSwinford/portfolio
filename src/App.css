@@ -168,12 +168,6 @@ section {
   position: relative; 
   z-index: 1;
 }
-.featured-project:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
-  border-color: rgba(130, 255, 216, 0.2);
-  z-index: 10; 
-}
 
 .featured-content { padding: 3rem; z-index: 2; display: flex; flex-direction: column; justify-content: center; }
 .featured-label { font-family: monospace; color: var(--accent-mint); margin-bottom: 1rem; font-size: 14px; }
@@ -206,12 +200,28 @@ section {
   filter: grayscale(30%) brightness(0.9);
 }
 
-/* FIX: Add scale(1.05) here. This triggers when the CARD is hovered.
-   The JS logic will override this with scale(1.25) when you mouse over the image itself. */
-.featured-project:hover .featured-img { 
-  filter: grayscale(0%) brightness(1); 
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  transform: scale(1.05) translateZ(0); /* Default hover scale */
+/* ONLY apply hover effects on Desktop */
+@media (hover: hover) {
+  .featured-project:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+    border-color: rgba(130, 255, 216, 0.2);
+    z-index: 10; 
+  }
+
+  .featured-project:hover .featured-img { 
+    filter: grayscale(0%) brightness(1); 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transform: scale(1.05) translateZ(0); 
+  }
+  
+  .project-card:hover { 
+    transform: translateY(-5px); background: rgba(130, 255, 216, 0.08); border-color: var(--accent-mint); 
+    box-shadow: 0 15px 30px rgba(130, 255, 216, 0.2); color: var(--text-white) !important;
+  }
+  .project-card:hover * { color: var(--text-white) !important; }
+  
+  .project-card:hover .card-img-container img { transform: scale(1.05); }
 }
 
 /* Grid Projects */
@@ -222,11 +232,7 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); padding: 2rem; border-radius: 25px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;
 }
-.project-card:hover { 
-  transform: translateY(-5px); background: rgba(130, 255, 216, 0.08); border-color: var(--accent-mint); 
-  box-shadow: 0 15px 30px rgba(130, 255, 216, 0.2); color: var(--text-white) !important;
-}
-.project-card:hover * { color: var(--text-white) !important; }
+
 .card-img-container {
   height: 180px; width: 100%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; flex-shrink: 0;
 }
@@ -234,7 +240,7 @@ section {
   max-width: 100%; max-height: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease;
   backface-visibility: hidden; transform: translateZ(0); image-rendering: -webkit-optimize-contrast;
 }
-.project-card:hover .card-img-container img { transform: scale(1.05); }
+
 .card-content { display: flex; flex-direction: column; flex: 1; }
 .project-tags-wrapper { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; padding-top: 1rem; }
 .card-title { font-size: 24px; font-weight: 500; margin-bottom: 0.5rem; display: flex; justify-content: space-between; height: 60px; overflow: hidden; }
@@ -246,7 +252,7 @@ section {
 .email-container { margin-bottom: 3rem; }
 .email-label { color: var(--accent-mint); font-family: monospace; font-size: 14px; margin-bottom: 0.5rem; display: block; }
 .email-btn {
-    font-size: 36px; weight: 700; color: var(--text-white); background: transparent; border: none; padding: 0; cursor: pointer; text-align: left;
+    font-size: 36px; font-weight: 700; color: var(--text-white); background: transparent; border: none; padding: 0; cursor: pointer; text-align: left;
     transition: color 0.3s ease; outline: none !important; box-shadow: none !important;
 }
 .email-btn:hover { color: var(--accent-mint); text-decoration: underline; text-underline-offset: 8px; }
@@ -276,11 +282,17 @@ section {
   
   .featured-project { display: flex; flex-direction: column-reverse; }
   .featured-img-container {
-    height: 220px; width: 100%; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.05);
+    height: auto; 
+    min-height: 220px; /* Keep as fallback */
+    width: 100%; 
+    border-left: none; 
+    border-bottom: 1px solid rgba(255,255,255,0.05);
     border-radius: 16px 16px 0 0;
   }
   .featured-img {
-    width: 100%; height: 100%; object-fit: cover;
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
     border-radius: 16px 16px 0 0; 
   }
   .featured-content { padding: 1.5rem; }

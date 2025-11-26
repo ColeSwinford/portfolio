@@ -78,7 +78,7 @@ export const projects = [
         description: "Instagram followers analyzer and export",
         tech: "HTML • CSS • Javascript • React",
         icon: "fa-brands fa-github",
-        link: "https://github.com/ColeSwinford/ig-analyzer",
+        link: "https://coleswinford.github.io/ig-analyzer/",
         image: "/images/IG_Analyzer.png"
     },
     {
@@ -111,6 +111,6 @@ export const featuredProject = {
     title: "Spotify Aggregator",
     description: "Spotify playlist aggregator, search, and export",
     tech: "HTML • CSS • Javascript • React",
-    link: "https://github.com/ColeSwinford/spotify-aggregator",
+    link: "https://coleswinford.github.io/spotify-aggregator/",
     image: "/images/Spotify_Aggregator.png"
 };
