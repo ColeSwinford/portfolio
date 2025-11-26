@@ -14,11 +14,10 @@ export const personalInfo = {
 };
 
 export const skills = [
-    "C, C++, Assembly", "C# / .NET Core", "HTML, CSS, JavaScript, React", 
-    "Python", "SQL / Database Design", "Java", "AWS / GCP / Azure", 
-    "Linux Administration", "Git / CI/CD", "Virtualization", 
-    "Docker / Kubernetes", "System Architecture", "Data Structures", 
-    "Machine Learning", "FPGAs / VHDL"
+    "System Architecture", "C# / .NET", "Docker / Kubernetes", "Git / CI/CD", 
+    "SQL / Database Design", "AWS / GCP / Azure", "HTML, CSS, JavaScript, React",
+    "Python", "Java", "Machine Learning", "Linux Administration", "Virtualization", 
+    "Data Structures", "C, C++, Assembly", "FPGAs / VHDL"
 ];
 
 // ... (Experience and Projects arrays remain the same as before)
