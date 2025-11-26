@@ -16,8 +16,8 @@ export const personalInfo = {
 export const skills = [
     "System Architecture", "C# / .NET", "Docker / Kubernetes", "Git / CI/CD", 
     "SQL / Database Design", "AWS / GCP / Azure", "HTML, CSS, JavaScript, React",
-    "Python", "Java", "Machine Learning", "Linux Administration", "Virtualization", 
-    "Data Structures", "C, C++, Assembly", "FPGAs / VHDL"
+    "Python", "Machine Learning", "Linux Administration", "Java", "Data Structures", 
+    "C, C++, Assembly", "FPGAs / VHDL"
 ];
 
 // ... (Experience and Projects arrays remain the same as before)
