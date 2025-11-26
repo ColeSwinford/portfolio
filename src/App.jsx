@@ -2,6 +2,57 @@ import { useState } from 'react';
 import './App.css';
 import { personalInfo, skills, experience, projects, featuredProject } from './data';
 
+// --- Helper Component for Dynamic 3D Tilt ---
+const TiltImage = ({ src, alt, className }) => {
+  const [transform, setTransform] = useState('');
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    
+    // Calculate mouse position relative to center (-0.5 to 0.5)
+    // -0.5 is top/left, 0.5 is bottom/right
+    const x = (e.clientX - left) / width - 0.5; 
+    const y = (e.clientY - top) / height - 0.5; 
+
+    // PHYSICS LOGIC: "Pushing Down"
+    // To make the side we hover over go "down" (away from screen), we calculate rotations:
+    
+    // 1. Tilt X (Up/Down Axis):
+    // If mouse is Top (y < 0), we want Top to go away (Positive RotateX).
+    // If mouse is Bottom (y > 0), we want Bottom to go away (Negative RotateX).
+    const rotateX = y * -20; // Multiplier determines tilt severity
+
+    // 2. Tilt Y (Left/Right Axis):
+    // If mouse is Right (x > 0), we want Right to go away (Negative RotateY).
+    // If mouse is Left (x < 0), we want Left to go away (Positive RotateY).
+    const rotateY = x * 20; 
+
+    // Apply Perspective + Rotation + Scale (Enlarge)
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.5)`);
+  };
+
+  const handleMouseLeave = () => {
+    // Reset to default
+    setTransform('');
+  };
+
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className={className}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{ 
+        transform: transform, 
+        /* Fast transition for smooth movement, slow transition for reset */
+        transition: transform ? 'transform 0.1s ease-out' : 'transform 0.5s ease',
+        willChange: 'transform' 
+      }} 
+    />
+  );
+};
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeJob, setActiveJob] = useState(experience[0]); 
@@ -21,6 +72,9 @@ function App() {
       
       {/* --- Navigation --- */}
       <nav>
+        <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+        </div>
         <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="#about" onClick={() => setIsMenuOpen(false)}>/about me</a></li>
           <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>/experience</a></li>
@@ -102,13 +156,14 @@ function App() {
             <h3 className="featured-title">{featuredProject.title}</h3>
             <p className="featured-desc">{featuredProject.description}</p>
             <div className="skills-grid" style={{marginTop: 'auto'}}>
-               {getTechTags("HTML • CSS • JavaScript").map(tag => (
+               {getTechTags(featuredProject.tech).map(tag => (
                    <span className="skill-tag" key={tag} style={{fontSize:'12px'}}>{tag}</span>
                ))}
             </div>
           </div>
           <div className="featured-img-container">
-            <img src={featuredProject.image} alt={featuredProject.title} className="featured-img" />
+            {/* Using the new TiltImage component here */}
+            <TiltImage src={featuredProject.image} alt={featuredProject.title} className="featured-img" />
           </div>
         </a>
 
@@ -117,7 +172,8 @@ function App() {
           {projects.map((proj, i) => (
             <a href={proj.link} key={i} target="_blank" rel="noreferrer" className="project-card">
               <div className="card-img-container">
-                <img src={proj.image} alt={proj.title} className="card-img" />
+                 {/* Using the new TiltImage component here */}
+                 <TiltImage src={proj.image} alt={proj.title} className="card-img" />
               </div>
               <div className="card-content">
                 <div className="card-title">

@@ -14,7 +14,7 @@ export const personalInfo = {
 };
 
 export const skills = [
-    "C, C++, Assembly", "C# / .NET Core", "HTML, CSS, JavaScript", 
+    "C, C++, Assembly", "C# / .NET Core", "HTML, CSS, JavaScript, React", 
     "Python", "SQL / Database Design", "Java", "AWS / GCP / Azure", 
     "Linux Administration", "Git / CI/CD", "Virtualization", 
     "Docker / Kubernetes", "System Architecture", "Data Structures", 
@@ -74,6 +74,22 @@ export const experience = [
 
 export const projects = [
     {
+        title: "IG Analyzer",
+        description: "Instagram followers analyzer and export",
+        tech: "HTML • CSS • Javascript • React",
+        icon: "fa-brands fa-github",
+        link: "https://github.com/ColeSwinford/ig-analyzer",
+        image: "/images/IG_Analyzer.png"
+    },
+    {
+        title: "Zenodoro",
+        description: "Relaxing, zen-themed pomodoro timer",
+        tech: "HTML • CSS • JavaScript",
+        icon: "fa-brands fa-github",
+        link: "https://coleswinford.github.io/Zenodoro/",
+        image: "/images/zenodoro.png"
+    },
+    {
         title: "EZ Hotkey",
         description: "Easy-to-use hotkey program for Windows",
         tech: "Python",
@@ -92,8 +108,9 @@ export const projects = [
 ];
 
 export const featuredProject = {
-    title: "Zenodoro",
-    description: "Relaxing, zen-themed pomodoro timer",
-    link: "https://coleswinford.github.io/Zenodoro/",
-    image: "/images/zenodoro.png"
+    title: "Spotify Aggregator",
+    description: "Spotify playlist aggregator, search, and export",
+    tech: "HTML • CSS • Javascript • React",
+    link: "https://github.com/ColeSwinford/spotify-aggregator",
+    image: "/images/Spotify_Aggregator.png"
 };

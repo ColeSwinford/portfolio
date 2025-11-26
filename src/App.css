@@ -34,22 +34,17 @@ html {
 .section-heading { font-size: 50px; font-weight: 500; color: var(--text-white); display: inline-block; }
 
 /* --- Link Styling (Glass Pill Effect) --- */
-/* Target text links inside main content areas */
 .about-text a, 
 .exp-company, 
 .featured-desc a,
 .exp-bullets a {
   color: var(--accent-mint) !important;
   text-decoration: none;
-  
-  /* Layout fix: Use inline so it flows with text, but clone decoration for wrapping lines */
   display: inline;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  
-  /* Glass Base */
   position: relative;
-  padding: 2px 6px; /* Padding for the highlight area */
+  padding: 2px 6px; 
   border-radius: 6px;
   border: 1px solid transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,17 +54,13 @@ html {
 .exp-company:hover, 
 .featured-desc a:hover,
 .exp-bullets a:hover {
-  /* The Glass Hover Effect */
   background: rgba(130, 255, 216, 0.1); 
   border-color: rgba(130, 255, 216, 0.2); 
   box-shadow: 0 4px 12px rgba(130, 255, 216, 0.1); 
   text-shadow: 0 0 8px rgba(130, 255, 216, 0.4); 
-  
-  /* Ensure cursor pointer for clarity */
   cursor: pointer;
 }
 
-/* --- Global Link Reset --- */
 a { text-decoration: none; color: inherit; }
 a:visited, a:active, a:focus { color: inherit; outline: none; }
 
@@ -88,7 +79,6 @@ nav {
 
 .nav-menu { display: flex; gap: 2rem; list-style: none; }
 .nav-menu a { color: var(--text-gray); text-decoration: none; font-size: 16px; position: relative; }
-
 .nav-menu a::after {
   content: ''; width: 0%; height: 2px; background: var(--accent-mint);
   display: block; margin: auto; position: absolute; bottom: -5px; left: 0; transition: 0.3s;
@@ -103,131 +93,64 @@ nav {
   justify-content: center;
   align-items: flex-start; 
   height: 100vh;
-  
-  /* CENTERED LAYOUT FIX */
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .hero-hi { font-size: 18px; font-weight: 300; color: var(--accent-mint); margin-bottom: 1rem; display: block; }
 .hero-name { font-size: 80px; font-weight: 600; line-height: 0.9; color: var(--text-white); margin-bottom: 10px; }
 .hero-tagline { font-size: 72px; font-weight: 500; line-height: 1.1; color: var(--text-gray); margin-bottom: 1.5rem; }
-
-.hero-line {
-  width: 60px; height: 4px; background: var(--accent-mint); margin: 1rem 0 1.5rem 0; border-radius: 2px;
-}
-
+.hero-line { width: 60px; height: 4px; background: var(--accent-mint); margin: 1rem 0 1.5rem 0; border-radius: 2px; }
 .hero-subtitle { font-size: 24px; color: var(--text-gray); font-weight: 400; margin-bottom: 3rem; letter-spacing: 0.02em; }
-
 .welcome-btn {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--text-gray);
-  border: 1px solid var(--text-gray);
-  border-radius: 25px;
-  padding: 12px 55px;
-  font-size: 18px;
-  transition: 0.3s;
-  cursor: pointer;
-  background: transparent;
+  display: inline-block; text-decoration: none; color: var(--text-gray); border: 1px solid var(--text-gray);
+  border-radius: 25px; padding: 12px 55px; font-size: 18px; transition: 0.3s; cursor: pointer; background: transparent;
 }
-.welcome-btn:hover {
-  border-color: var(--accent-mint);
-  background: var(--accent-mint);
-  color: var(--bg-dark);
-}
+.welcome-btn:hover { border-color: var(--accent-mint); background: var(--accent-mint); color: var(--bg-dark); }
 
-/* --- GLOBAL SECTION LAYOUT --- */
+/* --- Global Section --- */
 section {
-  min-height: 80vh;
-  padding-top: 15vh;
-  padding-bottom: 100px;
-  
-  /* Center all sections */
-  width: 100%;
-  max-width: 1000px; /* Limits content width */
-  margin: 0 auto;    /* Centers the block */
-  padding-left: 20px;
-  padding-right: 20px;
+  min-height: 80vh; padding-top: 15vh; padding-bottom: 100px;
+  width: 100%; max-width: 1000px; margin: 0 auto; padding-left: 20px; padding-right: 20px;
 }
 
-/* --- About Section --- */
-.about-content { 
-  max-width: 800px; /* Slightly narrower for readability */
-  margin: 0 auto; 
-}
+/* --- About & Experience --- */
+.about-content { max-width: 800px; margin: 0 auto; }
 .about-lead { font-size: 28px; font-weight: 500; color: var(--text-white); margin: 1.5rem 0 1rem; }
-.about-text { 
-  font-size: 18px; line-height: 1.8; color: var(--text-gray); margin-bottom: 1.5rem; max-width: 650px;
-}
+.about-text { font-size: 18px; line-height: 1.8; color: var(--text-gray); margin-bottom: 1.5rem; max-width: 650px; }
 .about-skills-title { font-size: 22px; font-weight: 500; color: var(--text-white); margin-top: 3rem; margin-bottom: 1.5rem; }
-
 .skills-grid { display: inline-flex; flex-wrap: wrap; gap: 12px; width: 100%; }
 .skill-tag {
   background: rgba(47, 72, 88, 0.5); border: 1px solid var(--secondary-bg); color: var(--accent-mint);
   padding: 8px 16px; border-radius: 4px; font-size: 14px; font-family: monospace; transition: 0.3s; cursor: default; white-space: nowrap;
 }
-.skill-tag:hover {
-  border-color: var(--accent-mint); background: rgba(130, 255, 216, 0.1); transform: translateY(-2px);
-}
+.skill-tag:hover { border-color: var(--accent-mint); background: rgba(130, 255, 216, 0.1); transform: translateY(-2px); }
 
-/* --- Experience Section --- */
 #experience { padding-top: 120px; }
-
-/* FIX: Align the title with the grid content below it */
-#experience .about-content {
-  max-width: 100%;
-  margin: 0;
-}
-
-.exp-container { 
-  display: grid; 
-  grid-template-columns: 200px 1fr; 
-  gap: 4rem; 
-  margin-top: 3rem; 
-  align-items: start; 
-  
-  /* Ensure this container is also centered */
-  max-width: 100%;
-}
-
+#experience .about-content { max-width: 100%; margin: 0; }
+.exp-container { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; margin-top: 3rem; align-items: start; max-width: 100%; }
 .exp-tabs { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-
 .exp-btn {
   display: block; width: 100%; text-align: left; padding: 16px 20px; font-size: 16px; font-family: inherit; cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(4px); border-radius: 8px; color: var(--text-gray);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(4px); border-radius: 8px; color: var(--text-gray);
   outline: none !important; box-shadow: none !important; -webkit-tap-highlight-color: transparent;
 }
 .exp-btn:focus-visible { border-color: var(--accent-mint); }
-.exp-btn:hover { 
-  background: rgba(255, 255, 255, 0.08); border-color: rgba(130, 255, 216, 0.5); color: var(--text-white); transform: translateX(5px);
-}
+.exp-btn:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(130, 255, 216, 0.5); color: var(--text-white); transform: translateX(5px); }
 .exp-btn.selected { 
   background: rgba(130, 255, 216, 0.1); border: 1px solid var(--accent-mint); color: var(--accent-mint); 
   box-shadow: 0 0 20px rgba(130, 255, 216, 0.15) !important; transform: translateX(5px);
 }
-
-/* FIX: Allow height to grow so text isn't cut off */
-.exp-details { 
-  min-height: 400px; /* Keep minimum height for stability */
-  height: auto;      /* Allow unlimited growth for long text */
-}
-
+.exp-details { min-height: 400px; height: auto; }
 .exp-details h3 { color: var(--text-white); font-size: 32px; font-weight: 500; margin-bottom: 0.5rem; }
-
-.exp-company { 
-    font-size: 24px; transition: all 0.3s ease; display: inline-block; cursor: pointer;
-}
-
+.exp-company { font-size: 24px; transition: all 0.3s ease; display: inline-block; cursor: pointer; }
 .exp-dates { color: var(--text-gray); margin-bottom: 1.5rem; display: block; margin-top: 0.5rem; font-family: monospace; font-size: 14px; }
 .exp-bullets li { margin-bottom: 12px; display: flex; gap: 12px; line-height: 1.6; font-size: 18px; color: var(--text-gray); }
 
 /* --- Projects Section --- */
 #projects { padding-top: 120px; }
-.projects-header { max-width: 100%; } /* Handled by section alignment */
+.projects-header { max-width: 100%; }
 
 .featured-project { 
   margin: 4rem auto; 
@@ -237,14 +160,19 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  overflow: hidden; 
+  overflow: visible; 
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+  z-index: 1;
 }
 .featured-project:hover {
-  transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); border-color: rgba(130, 255, 216, 0.2);
+  transform: translateY(-5px); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+  border-color: rgba(130, 255, 216, 0.2);
+  z-index: 10; 
 }
 
 .featured-content { padding: 3rem; z-index: 2; display: flex; flex-direction: column; justify-content: center; }
@@ -253,20 +181,42 @@ section {
 .featured-desc { color: var(--text-gray); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; }
 
 .featured-img-container {
-  width: 100%; height: 100%; min-height: 400px; position: relative; border-left: 1px solid rgba(255, 255, 255, 0.05);
-  display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0, 0, 0, 0.2);
+  width: 100%; height: 100%; min-height: 400px; position: relative; 
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex; align-items: center; justify-content: center; padding: 20px; 
+  background: rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
+
 .featured-img {
-  width: 100%; height: 100%; object-fit: contain; object-position: center; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) grayscale(30%) brightness(0.9);
-  transition: all 0.5s ease; display: block;
+  width: auto; 
+  height: auto; 
+  max-width: 100%; 
+  max-height: 100%;
+  display: block;
+  position: relative; 
+  z-index: 20;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  image-rendering: -webkit-optimize-contrast;
+  border-radius: 16px; 
+  transition: all 0.5s ease; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  filter: grayscale(30%) brightness(0.9);
 }
-.featured-project:hover .featured-img { filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5)) grayscale(0%) brightness(1); transform: scale(1.02); }
+
+/* FIX: Add scale(1.05) here. This triggers when the CARD is hovered.
+   The JS logic will override this with scale(1.25) when you mouse over the image itself. */
+.featured-project:hover .featured-img { 
+  filter: grayscale(0%) brightness(1); 
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transform: scale(1.05) translateZ(0); /* Default hover scale */
+}
 
 /* Grid Projects */
 .grid-title { text-align: center; font-size: 40px; margin: 8rem 0 3rem; color: var(--text-gray); }
-.projects-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; width: 100%;
-}
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; width: 100%; }
 .project-card {
   background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); padding: 2rem; border-radius: 25px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -277,19 +227,19 @@ section {
   box-shadow: 0 15px 30px rgba(130, 255, 216, 0.2); color: var(--text-white) !important;
 }
 .project-card:hover * { color: var(--text-white) !important; }
-
 .card-img-container {
   height: 180px; width: 100%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; flex-shrink: 0;
 }
 .card-img-container img {
   max-width: 100%; max-height: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease;
+  backface-visibility: hidden; transform: translateZ(0); image-rendering: -webkit-optimize-contrast;
 }
 .project-card:hover .card-img-container img { transform: scale(1.05); }
 .card-content { display: flex; flex-direction: column; flex: 1; }
 .project-tags-wrapper { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; padding-top: 1rem; }
 .card-title { font-size: 24px; font-weight: 500; margin-bottom: 0.5rem; display: flex; justify-content: space-between; height: 60px; overflow: hidden; }
 
-/* --- Contact Section --- */
+/* --- Contact --- */
 #contact { padding-top: 120px; min-height: 80vh; position: relative; padding-bottom: 150px; }
 .contact-content { margin: 0 auto; max-width: 800px; }
 .contact-lead { font-size: 32px; font-weight: 500; color: var(--text-gray); margin-top: 1rem; margin-bottom: 4rem; }
@@ -305,105 +255,35 @@ section {
 .contact-icons a { color: var(--text-gray); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; }
 .contact-icons i { font-size: 42px; }
 .contact-icons a:hover { color: var(--accent-mint); transform: translateY(-3px); }
-
-/* --- Footer --- */
-.footer-text {
-    position: absolute; bottom: 20px; left: 0; right: 0; width: 100%; text-align: center;
-    color: var(--text-gray); font-size: 14px; font-family: monospace; opacity: 0.6; background-color: var(--bg-dark); z-index: 10;
-}
+.footer-text { position: absolute; bottom: 20px; left: 0; right: 0; width: 100%; text-align: center; color: var(--text-gray); font-size: 14px; font-family: monospace; opacity: 0.6; background-color: var(--bg-dark); z-index: 10; }
 
 /* --- Mobile Adjustments --- */
 @media(max-width: 800px) {
-  
-  /* 1. Reset & Safety First */
-  * { box-sizing: border-box; } /* Crucial: stops padding from expanding width */
-
-  section { 
-    padding: 60px 20px; /* Simplified padding */
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* 2. Remove Navigation Completely */
+  * { box-sizing: border-box; } 
+  section { padding: 60px 20px; width: 100%; overflow-x: hidden; }
   nav { display: none !important; }
-
-  /* 3. Hero Adjustments */
-  .hero-section { 
-    padding: 0 20px;
-    height: auto;
-    min-height: 80vh; 
-    padding-top: 100px; /* Add top space since nav is gone */
-  }
+  .hero-section { padding: 0 20px; height: auto; min-height: 80vh; padding-top: 100px; }
   .hero-name { font-size: 42px; line-height: 1.1; } 
   .hero-tagline { font-size: 28px; line-height: 1.2; margin-top: 10px; } 
   .hero-subtitle { font-size: 18px; }
-  
-  /* 4. Fix "Wonky" Text Links */
-  .about-text a, 
-  .exp-company, 
-  .featured-desc a,
-  .exp-bullets a {
-     display: inline; /* Keep inline for flow, box-decoration-break handles the rest */
-     margin: 0;      
-     white-space: normal;
-  }
-
-  /* 5. Reset Margins */
-  .about-content,
-  .exp-container,
-  .featured-project,
-  .projects-header,
-  .contact-content {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  /* 6. Experience Tabs (Horizontal Scroll) */
-  .exp-container { 
-    grid-template-columns: 1fr; 
-    gap: 2rem;
-  }
-  .exp-tabs { 
-    flex-direction: row; 
-    overflow-x: auto; 
-    padding-bottom: 10px; 
-    width: 100%;
-    margin-bottom: 1rem;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
-  }
+  .about-text a, .exp-company, .featured-desc a, .exp-bullets a { display: inline; margin: 0; white-space: normal; }
+  .about-content, .exp-container, .featured-project, .projects-header, .contact-content { margin: 0; max-width: 100%; }
+  .exp-container { grid-template-columns: 1fr; gap: 2rem; }
+  .exp-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 10px; width: 100%; margin-bottom: 1rem; scrollbar-width: none; -ms-overflow-style: none; }
   .exp-tabs::-webkit-scrollbar { display: none; }
   .exp-btn { white-space: nowrap; width: auto; transform: none !important; }
   .exp-details { height: auto; }
-
-  /* 7. Featured Project Stack */
-  .featured-project {
-    display: flex;
-    flex-direction: column-reverse; 
-  }
+  
+  .featured-project { display: flex; flex-direction: column-reverse; }
   .featured-img-container {
-    height: 220px;
-    width: 100%;
-    border-left: none;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    height: 220px; width: 100%; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px 16px 0 0;
+  }
+  .featured-img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 16px 16px 0 0; 
   }
   .featured-content { padding: 1.5rem; }
-
-  /* 8. Fix Email Font Size on Mobile */
-  .email-btn {
-    /* "clamp" ensures it never gets smaller than 14px, but scales with 5% of screen width (5vw) */
-    font-size: clamp(14px, 5vw, 30px); 
-    white-space: nowrap;
-    width: 100%;
-    display: block;
-  }
-
-  /* 9. Footer Position */
-  .footer-text {
-      position: relative; 
-      bottom: auto;
-      margin-top: 3rem;
-      padding-bottom: 2rem;
-      width: 100%;
-  }
+  .email-btn { font-size: clamp(14px, 5vw, 30px); white-space: nowrap; width: 100%; display: block; }
+  .footer-text { position: relative; bottom: auto; margin-top: 3rem; padding-bottom: 2rem; width: 100%; }
 }
