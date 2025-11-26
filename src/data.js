@@ -30,10 +30,11 @@ export const experience = [
         link: "https://www.siho.org/",
         dates: "June 2025 - Present",
         bullets: [
-"Architected internal platforms that automated manual workflows and boosted operational efficiency",
-            "Established CI/CD pipelines, transitioning the org from ad-hoc deployments to reliable releases",
-            "Translated complex insurance business logic into scalable, production-ready software solutions",
-            "Modernized legacy systems to reduce technical debt and improve codebase maintainability"        ]
+            "As the organization's first engineer, established modern development standards to reduce technical debt and improve codebase maintainability",
+            "Architected internal platforms that automated manual insurance workflows and boosted operational efficiency",
+            "Established the organization’s first CI/CD pipelines, transitioning from ad-hoc deployments to reliable, gated releases",
+            "Translated complex operational requirements into scalable, production-ready software solutions"
+        ]
     },
     {
         id: "IGear Co-op III",
