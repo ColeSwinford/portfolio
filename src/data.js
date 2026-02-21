@@ -2,11 +2,10 @@ export const personalInfo = {
     name: "Cole Swinford",
     tagline: "I build things.",
     role: "Software Engineer",
-    // Splitting bio into structured paragraphs for better layout
     bioTitle: "Problem Solver & Builder",
     bioP1: "Driven by ownership and impact, I specialize in architecting full-cycle solutions—taking complex, open-ended technical challenges and turning them into reliable production systems. Whether I’m designing new platforms from scratch or optimizing efficiency and architecture, I focus on maintainability, scalability, and pragmatic design.",
     bioP2: "Beyond my professional work, I’m a tinkerer at heart. This site serves as a home for my personal experiments, open-source contributions, and the projects I build to satisfy my curiosity.",
-    email: "site.coleswinford@gmail.com",
+    email: "hello@coleswinford.com",
     socials: {
         github: "https://github.com/ColeSwinford",
         linkedin: "https://www.linkedin.com/in/steven-cole-swinford-94553b11b/"
