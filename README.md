@@ -4,6 +4,12 @@ My personal website and portfolio
 
 ## Notes
 
+### Run Dev
+
+```bash
+npm run dev
+```
+
 ### Deploy
 
 ```bash

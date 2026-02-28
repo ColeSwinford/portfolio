@@ -8,15 +8,15 @@ const TiltImage = ({ src, alt, className }) => {
 
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.target.getBoundingClientRect();
-    
+
     // Calculate mouse position relative to center (-0.5 to 0.5)
     // -0.5 is top/left, 0.5 is bottom/right
-    const x = (e.clientX - left) / width - 0.5; 
-    const y = (e.clientY - top) / height - 0.5; 
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
 
     // PHYSICS LOGIC: "Pushing Down"
     // To make the side we hover over go "down" (away from screen), we calculate rotations:
-    
+
     // 1. Tilt X (Up/Down Axis):
     // If mouse is Top (y < 0), we want Top to go away (Positive RotateX).
     // If mouse is Bottom (y > 0), we want Bottom to go away (Negative RotateX).
@@ -25,7 +25,7 @@ const TiltImage = ({ src, alt, className }) => {
     // 2. Tilt Y (Left/Right Axis):
     // If mouse is Right (x > 0), we want Right to go away (Negative RotateY).
     // If mouse is Left (x < 0), we want Left to go away (Positive RotateY).
-    const rotateY = x * 20; 
+    const rotateY = x * 20;
 
     // Apply Perspective + Rotation + Scale (Enlarge)
     setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.5)`);
@@ -37,39 +37,39 @@ const TiltImage = ({ src, alt, className }) => {
   };
 
   return (
-    <img 
-      src={src} 
-      alt={alt} 
+    <img
+      src={src}
+      alt={alt}
       className={className}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ 
-        transform: transform, 
+      style={{
+        transform: transform,
         /* Fast transition for smooth movement, slow transition for reset */
         transition: transform ? 'transform 0.1s ease-out' : 'transform 0.5s ease',
-        willChange: 'transform' 
-      }} 
+        willChange: 'transform'
+      }}
     />
   );
 };
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeJob, setActiveJob] = useState(experience[0]); 
+  const [activeJob, setActiveJob] = useState(experience[0]);
 
   const copyEmail = () => {
     navigator.clipboard.writeText(personalInfo.email);
     window.location.href = `mailto:${personalInfo.email}`;
     alert("Email copied to clipboard!");
   };
-  
+
   const getTechTags = (techString) => {
     return techString.split(' • ').map(tag => tag.trim());
   };
 
   return (
     <div className="app">
-      
+
       {/* --- Navigation --- */}
       <nav>
         <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -118,7 +118,7 @@ function App() {
           <ul className="exp-tabs">
             {experience.map(job => (
               <li key={job.id}>
-                <button 
+                <button
                   className={`exp-btn ${activeJob.id === job.id ? 'selected' : ''}`}
                   onClick={() => setActiveJob(job)}
                 >
@@ -147,18 +147,18 @@ function App() {
         <div className="projects-header">
           <span className="section-slash">/</span>
           <h2 className="section-heading">projects</h2>
-          <p className="about-lead" style={{fontSize:'28px'}}>A commitment to open-source</p>
+          <p className="about-lead" style={{ fontSize: '28px' }}>A commitment to open-source</p>
         </div>
 
-        <a href={featuredProject.link} target="_blank" rel="noreferrer" className="featured-project" style={{textDecoration: 'none'}}>
+        <a href={featuredProject.link} target="_blank" rel="noreferrer" className="featured-project" style={{ textDecoration: 'none' }}>
           <div className="featured-content">
             <p className="featured-label">featured project</p>
             <h3 className="featured-title">{featuredProject.title}</h3>
             <p className="featured-desc">{featuredProject.description}</p>
-            <div className="skills-grid" style={{marginTop: 'auto'}}>
-               {getTechTags(featuredProject.tech).map(tag => (
-                   <span className="skill-tag" key={tag} style={{fontSize:'12px'}}>{tag}</span>
-               ))}
+            <div className="skills-grid" style={{ marginTop: 'auto' }}>
+              {getTechTags(featuredProject.tech).map(tag => (
+                <span className="skill-tag" key={tag} style={{ fontSize: '12px' }}>{tag}</span>
+              ))}
             </div>
           </div>
           <div className="featured-img-container">
@@ -172,8 +172,8 @@ function App() {
           {projects.map((proj, i) => (
             <a href={proj.link} key={i} target="_blank" rel="noreferrer" className="project-card">
               <div className="card-img-container">
-                 {/* Using the new TiltImage component here */}
-                 <TiltImage src={proj.image} alt={proj.title} className="card-img" />
+                {/* Using the new TiltImage component here */}
+                <TiltImage src={proj.image} alt={proj.title} className="card-img" />
               </div>
               <div className="card-content">
                 <div className="card-title">
@@ -182,9 +182,9 @@ function App() {
                 </div>
                 <p>{proj.description}</p>
                 <div className="project-tags-wrapper">
-                    {getTechTags(proj.tech).map(tag => (
-                        <span className="skill-tag" key={tag} style={{fontSize:'12px', padding: '6px 12px', margin: '0'}}>{tag}</span>
-                    ))}
+                  {getTechTags(proj.tech).map(tag => (
+                    <span className="skill-tag" key={tag} style={{ fontSize: '12px', padding: '6px 12px', margin: '0' }}>{tag}</span>
+                  ))}
                 </div>
               </div>
             </a>
@@ -197,9 +197,9 @@ function App() {
         <div className="contact-content">
           <span className="section-slash">/</span>
           <h2 className="section-heading">contact</h2>
-          
+
           <p className="contact-lead">Let's get in touch.</p>
-          
+
           <div className="email-container">
             <p className="email-label">email</p>
             <button onClick={copyEmail} className="email-btn">

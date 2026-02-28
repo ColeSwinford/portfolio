@@ -13,9 +13,9 @@ export const personalInfo = {
 };
 
 export const skills = [
-    "System Architecture", "C# / .NET", "Docker / Kubernetes", "Git / CI/CD", 
+    "System Architecture", "C# / .NET", "Docker / Kubernetes", "Git / CI/CD",
     "SQL / Database Design", "AWS / GCP / Azure", "HTML, CSS, JavaScript, React",
-    "Python", "Machine Learning", "Linux Administration", "Java", "Data Structures", 
+    "Python", "Machine Learning", "Linux Administration", "Java", "Data Structures",
     "C, C++, Assembly", "FPGAs / VHDL"
 ];
 
@@ -73,6 +73,14 @@ export const experience = [
 
 export const projects = [
     {
+        title: "Spotify Backup Archive",
+        description: "Self-hosted Dockerized Python utility to locally archive complete Spotify library metadata.",
+        tech: "Python • Docker • Bash • REST API",
+        icon: "fa-brands fa-github",
+        link: "https://github.com/ColeSwinford/spotify-backup",
+        image: "/images/spotify-backup.png"
+    },
+    {
         title: "IG Analyzer",
         description: "Instagram followers analyzer and export",
         tech: "HTML • CSS • Javascript • React",
@@ -108,8 +116,8 @@ export const projects = [
 
 export const featuredProject = {
     title: "Spotify Aggregator",
-    description: "Spotify playlist aggregator, search, and export",
-    tech: "HTML • CSS • Javascript • React",
-    link: "https://coleswinford.github.io/spotify-aggregator/",
+    description: "Spotify playlist aggregator, search, and export. (view demo on repo)",
+    tech: "HTML • CSS • Javascript • React • REST API",
+    link: "https://github.com/ColeSwinford/spotify-aggregator",
     image: "/images/Spotify_Aggregator.png"
 };

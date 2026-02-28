@@ -3,14 +3,15 @@
   line-height: 1.5;
   font-weight: 400;
   /* Enforce your dark theme background everywhere to prevent white flashes */
-  background-color: #1d252c; 
+  background-color: #1d252c;
   color-scheme: dark;
 }
 
 /* Remove the "display: flex" and "place-items: center" that was breaking mobile layout */
 body {
   width: 100%;
-  overflow-x: hidden; /* Ensures nothing spills over horizontally */
+  overflow-x: hidden;
+  /* Ensures nothing spills over horizontally */
   position: relative;
 }
 
