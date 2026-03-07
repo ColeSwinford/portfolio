@@ -13,10 +13,16 @@ export const personalInfo = {
 };
 
 export const skills = [
-    "System Architecture", "C# / .NET", "Docker / Kubernetes", "Git / CI/CD",
-    "SQL / Database Design", "AWS / GCP / Azure", "HTML, CSS, JavaScript, React",
-    "Python", "Machine Learning", "Linux Administration", "Java", "Data Structures",
-    "C, C++, Assembly", "FPGAs / VHDL"
+    "System Architecture",
+    "C# / .NET",
+    "Docker",
+    "Git / CI/CD",
+    "SQL / Database Design",
+    "MongoDB",
+    "Azure",
+    "HTML, CSS, JavaScript, React",
+    "Python",
+    "Linux Administration"
 ];
 
 // ... (Experience and Projects arrays remain the same as before)
@@ -28,10 +34,11 @@ export const experience = [
         link: "https://www.siho.org/",
         dates: "June 2025 - Present",
         bullets: [
-            "As the organization's first engineer, established modern development standards to reduce technical debt and improve codebase maintainability",
-            "Architected internal platforms that automated manual insurance workflows and boosted operational efficiency",
-            "Established the organization’s first CI/CD pipelines, transitioning from ad-hoc deployments to reliable, gated releases",
-            "Translated complex operational requirements into scalable, production-ready software solutions"
+            "Operating as the organization's first dedicated software engineer, owning the end-to-end technical architecture, DevOps infrastructure, and platform modernization strategy.",
+            "Architected a modular monolith application structure, strictly defining module boundaries and data ownership to eliminate premature distributed-system complexity while ensuring future scalability.",
+            "Established the organization's CI/CD pipeline and built a standardized Docker containerization strategy, reducing manual deployment efforts by over 90%.",
+            "Developed reusable internal libraries for Serilog structured logging and Azure Communication Services, reducing setup time for new services by 85%.",
+            "Automated manual insurance workflows, including a parallel-processed compliance application that reduced provider exclusion screening from several hours to under one minute per file."
         ]
     },
     {

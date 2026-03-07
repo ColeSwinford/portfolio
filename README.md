@@ -4,6 +4,12 @@ My personal website and portfolio
 
 ## Notes
 
+### NPM install
+
+```bash
+npm install
+```
+
 ### Run Dev
 
 ```bash
