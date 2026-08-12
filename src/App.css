@@ -275,6 +275,36 @@ section:last-of-type {
   color: var(--accent-tan-dark);
 }
 
+/* --- Skills Categories (Editorial Row Layout) --- */
+.skills-section {
+  margin-top: 3.5rem;
+}
+
+.skills-categories-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.skill-category-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  align-items: start;
+  gap: 1rem;
+}
+
+.skill-category-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-tan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: 3px;
+}
+
 /* --- Experience Section --- */
 #experience .about-content {
   max-width: 100%;
@@ -425,9 +455,7 @@ section:last-of-type {
   max-width: 100%;
   max-height: 100%;
   display: block;
-  border-radius: 2px;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 12px rgba(28, 25, 23, 0.04);
+  border: none;
 }
 
 @media (hover: hover) {
@@ -492,8 +520,15 @@ section:last-of-type {
 .card-img-container img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 2px;
-  border: 1px solid var(--border-light);
+  object-fit: contain;
+  border: none;
+}
+
+/* Force all SVG logos to render at a uniform 80x80px square */
+.card-img-container img[src$=".svg"] {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
 }
 
 .card-content {
@@ -621,25 +656,92 @@ section:last-of-type {
     padding: 80px 20px;
   }
 
-  /* 1. Navbar Toggle & Smooth Editorial Drawer */
+  /* Navigation Overlay Backdrop */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(28, 25, 23, 0.2);
+    backdrop-filter: blur(2px);
+    z-index: 90;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* 1. Navbar Toggle & Vector Morphing Icon */
   nav {
     justify-content: space-between;
-    padding: 16px 20px;
+    padding: 18px 20px;
   }
 
   .mobile-toggle {
     display: block;
-    font-size: 20px;
-    color: var(--text-primary);
-    cursor: pointer;
+    position: relative;
+    width: 24px;
+    height: 18px;
     background: transparent;
     border: none;
-    padding: 4px;
-    transition: transform 0.2s ease;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
   }
 
-  .mobile-toggle:active {
-    transform: scale(0.92);
+  /* Invisible 44x44px touch target for effortless tapping */
+  .mobile-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+  }
+
+  .hamburger-bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 1px;
+    transition:
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Integer coordinates with uniform 5px gaps */
+  .hamburger-bar:nth-child(1) {
+    top: 1px;
+  }
+
+  .hamburger-bar:nth-child(2) {
+    top: 8px;
+  }
+
+  .hamburger-bar:nth-child(3) {
+    top: 15px;
+  }
+
+  /* Perfectly Symmetrical X Morph at y = 8px */
+  .mobile-toggle.open .hamburger-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-toggle.open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .mobile-toggle.open .hamburger-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .nav-menu {
@@ -688,6 +790,13 @@ section:last-of-type {
     font-size: clamp(28px, 8vw, 40px);
   }
 
+  /* Skills Rows Mobile Stacking */
+  .skill-category-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+  }
+
   /* 3. Experience Tabs */
   .exp-container {
     grid-template-columns: 1fr;
@@ -702,14 +811,11 @@ section:last-of-type {
     padding-bottom: 0;
     margin-bottom: 1.5rem;
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE/Edge */
   }
 
   .exp-tabs::-webkit-scrollbar {
     display: none;
-    /* Chrome/Safari/Blink */
   }
 
   .exp-btn {

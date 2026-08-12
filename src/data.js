@@ -12,17 +12,42 @@ export const personalInfo = {
     }
 };
 
-export const skills = [
-    "System Architecture",
-    "C# / .NET",
-    "Docker",
-    "Git / CI/CD",
-    "SQL / Database Design",
-    "MongoDB",
-    "Azure",
-    "HTML, CSS, JavaScript, React",
-    "Python",
-    "Linux Administration"
+export const skillCategories = [
+    {
+        category: "Languages & Frameworks",
+        skills: [
+            "C# / .NET",
+            ".NET Web APIs & Blazor",
+            "TypeScript",
+            "Python"
+        ]
+    },
+    {
+        category: "Backend & Systems",
+        skills: [
+            "RESTful API Design",
+            "Background Services",
+            "System Observability & Logging",
+            "Automated Workflows"
+        ]
+    },
+    {
+        category: "Data & Persistence",
+        skills: [
+            "MongoDB (NoSQL)",
+            "SQL & Relational Databases",
+            "Database Schema Design"
+        ]
+    },
+    {
+        category: "DevOps & Infrastructure",
+        skills: [
+            "Docker & Containerization",
+            "CI/CD Build & Deployment",
+            "Cloud Infrastructure",
+            "Linux & Shell Scripting"
+        ]
+    }
 ];
 
 // ... (Experience and Projects arrays remain the same as before)
@@ -77,53 +102,61 @@ export const experience = [
     }
 ];
 
+export const featuredProject = {
+    title: "Local AI Video Compressor",
+    description: "A fully client-side, privacy-first video compressor using in-browser computer vision models and WebCodecs hardware acceleration to hit exact target file sizes.",
+    tech: "TypeScript • ONNX WebGPU • WebCodecs • WebAssembly",
+    link: "https://video-compressor.coleswinford.com/",
+    image: "/images/Local_AI_Video_Compressor.webp"
+};
+
 export const projects = [
     {
         title: "Spotify Backup",
         description: "Self-hosted Dockerized Python utility to locally archive complete Spotify library metadata.",
         tech: "Python • Docker • Bash • REST API",
-        icon: "fa-brands fa-github",
         link: "https://github.com/ColeSwinford/spotify-backup",
-        image: "/images/spotify-backup.png"
+        image: "/images/spotify-backup.svg",
+        icon: "github"
     },
     {
         title: "IG Analyzer",
-        description: "Instagram followers analyzer and export",
-        tech: "HTML • CSS • Javascript • React",
-        icon: "fa-brands fa-github",
-        link: "https://coleswinford.github.io/ig-analyzer/",
-        image: "/images/IG_Analyzer.png"
+        description: "Instagram follower analysis and export utility.",
+        tech: "React • JavaScript",
+        link: "https://github.com/ColeSwinford/IG-Analyzer",
+        image: "/images/IG_Analyzer.svg",
+        icon: "github"
+    },
+    {
+        title: "Spotify Aggregator",
+        description: "Spotify playlist aggregation, search, and export engine.",
+        tech: "React • JavaScript • REST API",
+        link: "https://github.com/ColeSwinford/Spotify-Aggregator",
+        image: "/images/Spotify_Aggregator.svg",
+        icon: "github"
     },
     {
         title: "Zenodoro",
-        description: "Relaxing, zen-themed pomodoro timer",
-        tech: "HTML • CSS • JavaScript",
-        icon: "fa-brands fa-github",
-        link: "https://coleswinford.github.io/Zenodoro/",
-        image: "/images/zenodoro.png"
+        description: "Relaxing, zen-themed pomodoro timer.",
+        tech: "JavaScript • CSS • HTML",
+        link: "https://github.com/ColeSwinford/Zenodoro",
+        image: "/images/zenodoro.webp",
+        icon: "github"
     },
     {
         title: "EZ Hotkey",
-        description: "Easy-to-use hotkey program for Windows",
+        description: "Lightweight Windows hotkey and automation utility.",
         tech: "Python",
-        icon: "fa-brands fa-github",
-        link: "https://github.com/ColeSwinford/Python--EZ-Hotkey",
-        image: "/images/EZ_Hotkey.png"
+        link: "https://github.com/ColeSwinford/EZ-Hotkey",
+        image: "/images/EZ_Hotkey.webp",
+        icon: "github"
     },
     {
         title: "Funky Monkey Friday",
-        description: "Discord bot that alerts your server when it's Funky Monkey Friday",
+        description: "Discord bot delivering scheduled server notifications for Funky Monkey Friday.",
         tech: "Python • discord.py",
-        icon: "fa-brands fa-github",
-        link: "https://github.com/ColeSwinford/Python--Funky-Monkey-Friday-Bot",
-        image: "/images/FMF.png"
+        link: "https://github.com/ColeSwinford/FunkyMonkeyFridayBot",
+        image: "/images/FMF.webp",
+        icon: "github"
     }
 ];
-
-export const featuredProject = {
-    title: "Spotify Aggregator",
-    description: "Spotify playlist aggregator, search, and export. (view demo on repo)",
-    tech: "HTML • CSS • Javascript • React • REST API",
-    link: "https://github.com/ColeSwinford/spotify-aggregator",
-    image: "/images/Spotify_Aggregator.png"
-};

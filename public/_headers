@@ -1,0 +1,18 @@
+# Global Security Headers & HTML Cache Strategy
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Immutable Cache for Vite-Bundled JS & CSS
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static Image & Vector Assets
+/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/favicon.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
