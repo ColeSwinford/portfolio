@@ -1,21 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+
 :root {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-  /* Enforce your dark theme background everywhere to prevent white flashes */
-  background-color: #1d252c;
-  color-scheme: dark;
+  background-color: #FBF9F4;
+  color: #1C1917;
+  color-scheme: light;
 }
 
-/* Remove the "display: flex" and "place-items: center" that was breaking mobile layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   overflow-x: hidden;
-  /* Ensures nothing spills over horizontally */
   position: relative;
+  background-color: #FBF9F4;
 }
 
-/* Remove the generic link styling that might clash with your nav */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: inherit;

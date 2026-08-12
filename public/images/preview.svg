@@ -1,0 +1,38 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,wght@0,400;1,400&amp;display=swap');
+    
+    .bg { fill: #FBF9F4; }
+    .card-border { stroke: #E7E2D8; stroke-width: 2; }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 18px; fill: #8C6B4B; letter-spacing: 0.08em; }
+    .name { font-family: 'Newsreader', serif; font-size: 104px; font-weight: 400; fill: #1C1917; }
+    .tagline { font-family: 'Newsreader', serif; font-style: italic; font-size: 76px; font-weight: 400; fill: #57534E; }
+    .line { stroke: #8C6B4B; stroke-width: 2; }
+    .domain { font-family: 'JetBrains Mono', monospace; font-size: 20px; fill: #8C6B4B; }
+    .bullet { fill: #8C6B4B; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" class="bg" />
+  
+  <!-- Outer Editorial Frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="4" class="bg" stroke="#E7E2D8" stroke-width="2"/>
+
+  <!-- Content Block -->
+  <g transform="translate(100, 150)">
+    <!-- Eyebrow -->
+    <text x="0" y="0" class="eyebrow">SOFTWARE ENGINEER</text>
+
+    <!-- Headline (No Period) -->
+    <text x="0" y="110" class="name">Cole Swinford</text>
+
+    <!-- Subheading Tagline -->
+    <text x="0" y="200" class="tagline">I build things.</text>
+
+    <!-- Divider Line -->
+    <line x1="0" y1="250" x2="60" y2="250" class="line" />
+
+    <!-- Domain Footer -->
+    <text x="0" y="320" class="domain">coleswinford.com</text>
+  </g>
+</svg>

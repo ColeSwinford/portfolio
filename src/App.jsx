@@ -2,57 +2,6 @@ import { useState } from 'react';
 import './App.css';
 import { personalInfo, skills, experience, projects, featuredProject } from './data';
 
-// --- Helper Component for Dynamic 3D Tilt ---
-const TiltImage = ({ src, alt, className }) => {
-  const [transform, setTransform] = useState('');
-
-  const handleMouseMove = (e) => {
-    const { left, top, width, height } = e.target.getBoundingClientRect();
-
-    // Calculate mouse position relative to center (-0.5 to 0.5)
-    // -0.5 is top/left, 0.5 is bottom/right
-    const x = (e.clientX - left) / width - 0.5;
-    const y = (e.clientY - top) / height - 0.5;
-
-    // PHYSICS LOGIC: "Pushing Down"
-    // To make the side we hover over go "down" (away from screen), we calculate rotations:
-
-    // 1. Tilt X (Up/Down Axis):
-    // If mouse is Top (y < 0), we want Top to go away (Positive RotateX).
-    // If mouse is Bottom (y > 0), we want Bottom to go away (Negative RotateX).
-    const rotateX = y * -20; // Multiplier determines tilt severity
-
-    // 2. Tilt Y (Left/Right Axis):
-    // If mouse is Right (x > 0), we want Right to go away (Negative RotateY).
-    // If mouse is Left (x < 0), we want Left to go away (Positive RotateY).
-    const rotateY = x * 20;
-
-    // Apply Perspective + Rotation + Scale (Enlarge)
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.5)`);
-  };
-
-  const handleMouseLeave = () => {
-    // Reset to default
-    setTransform('');
-  };
-
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        transform: transform,
-        /* Fast transition for smooth movement, slow transition for reset */
-        transition: transform ? 'transform 0.1s ease-out' : 'transform 0.5s ease',
-        willChange: 'transform'
-      }}
-    />
-  );
-};
-
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeJob, setActiveJob] = useState(experience[0]);
@@ -76,28 +25,27 @@ function App() {
           <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-          <li><a href="#about" onClick={() => setIsMenuOpen(false)}>/about me</a></li>
-          <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>/experience</a></li>
-          <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>/projects</a></li>
-          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>/contact</a></li>
+          <li><a href="#about" onClick={() => setIsMenuOpen(false)}>01. ABOUT</a></li>
+          <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>02. EXPERIENCE</a></li>
+          <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>03. PROJECTS</a></li>
+          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>04. CONTACT</a></li>
         </ul>
       </nav>
 
       {/* --- Hero Section --- */}
       <section className="hero-section">
-        <span className="hero-hi">Hi, my name is</span>
-        <h1 className="hero-name">{personalInfo.name}.</h1>
+        <span className="hero-hi">SOFTWARE ENGINEER</span>
+        <h1 className="hero-name">{personalInfo.name}</h1>
         <h2 className="hero-tagline">{personalInfo.tagline}</h2>
         <div className="hero-line"></div>
-        <p className="hero-subtitle">{personalInfo.role}</p>
-        <a href="#about" className="welcome-btn">about me</a>
+        <a href="#projects" className="welcome-btn">VIEW PROJECTS</a>
       </section>
 
       {/* --- About Section --- */}
       <section id="about">
         <div className="about-content">
-          <span className="section-slash">/</span>
-          <h2 className="section-heading">about me</h2>
+          <span className="section-number">01.</span>
+          <h2 className="section-heading">About Me</h2>
           <p className="about-lead">{personalInfo.bioTitle}</p>
           <p className="about-text">{personalInfo.bioP1}</p>
           <p className="about-text">{personalInfo.bioP2}</p>
@@ -111,8 +59,8 @@ function App() {
       {/* --- Experience Section --- */}
       <section id="experience">
         <div className="about-content">
-          <span className="section-slash">/</span>
-          <h2 className="section-heading">experience</h2>
+          <span className="section-number">02.</span>
+          <h2 className="section-heading">Experience</h2>
         </div>
         <div className="exp-container">
           <ul className="exp-tabs">
@@ -135,7 +83,7 @@ function App() {
             <span className="exp-dates">{activeJob.dates}</span>
             <ul className="exp-bullets">
               {activeJob.bullets.map((bullet, i) => (
-                <li key={i}><span className="accent">▹</span> {bullet}</li>
+                <li key={i}><span className="accent">—</span> {bullet}</li>
               ))}
             </ul>
           </div>
@@ -145,35 +93,33 @@ function App() {
       {/* --- Projects Section --- */}
       <section id="projects">
         <div className="projects-header">
-          <span className="section-slash">/</span>
-          <h2 className="section-heading">projects</h2>
-          <p className="about-lead" style={{ fontSize: '28px' }}>A commitment to open-source</p>
+          <span className="section-number">03.</span>
+          <h2 className="section-heading">Projects</h2>
+          <p className="section-subtitle">Open-source software and personal systems</p>
         </div>
 
         <a href={featuredProject.link} target="_blank" rel="noreferrer" className="featured-project" style={{ textDecoration: 'none' }}>
           <div className="featured-content">
-            <p className="featured-label">featured project</p>
+            <p className="featured-label">Featured Work</p>
             <h3 className="featured-title">{featuredProject.title}</h3>
             <p className="featured-desc">{featuredProject.description}</p>
             <div className="skills-grid" style={{ marginTop: 'auto' }}>
               {getTechTags(featuredProject.tech).map(tag => (
-                <span className="skill-tag" key={tag} style={{ fontSize: '12px' }}>{tag}</span>
+                <span className="skill-tag" key={tag} style={{ fontSize: '11px', padding: '4px 10px' }}>{tag}</span>
               ))}
             </div>
           </div>
           <div className="featured-img-container">
-            {/* Using the new TiltImage component here */}
-            <TiltImage src={featuredProject.image} alt={featuredProject.title} className="featured-img" />
+            <img src={featuredProject.image} alt={featuredProject.title} className="featured-img" />
           </div>
         </a>
 
-        <h3 className="grid-title">other noteworthy projects</h3>
+        <h3 className="grid-title">Noteworthy Projects</h3>
         <div className="projects-grid">
           {projects.map((proj, i) => (
             <a href={proj.link} key={i} target="_blank" rel="noreferrer" className="project-card">
               <div className="card-img-container">
-                {/* Using the new TiltImage component here */}
-                <TiltImage src={proj.image} alt={proj.title} className="card-img" />
+                <img src={proj.image} alt={proj.title} className="card-img" />
               </div>
               <div className="card-content">
                 <div className="card-title">
@@ -183,7 +129,7 @@ function App() {
                 <p>{proj.description}</p>
                 <div className="project-tags-wrapper">
                   {getTechTags(proj.tech).map(tag => (
-                    <span className="skill-tag" key={tag} style={{ fontSize: '12px', padding: '6px 12px', margin: '0' }}>{tag}</span>
+                    <span className="skill-tag" key={tag}>{tag}</span>
                   ))}
                 </div>
               </div>
@@ -192,23 +138,21 @@ function App() {
         </div>
       </section>
 
-      {/* --- CONTACT SECTION --- */}
+      {/* --- Contact Section --- */}
       <section id="contact">
         <div className="contact-content">
-          <span className="section-slash">/</span>
-          <h2 className="section-heading">contact</h2>
-
+          <span className="section-number">04.</span>
+          <h2 className="section-heading">Contact</h2>
           <p className="contact-lead">Let's get in touch.</p>
-
           <div className="email-container">
-            <p className="email-label">email</p>
+            <p className="email-label">EMAIL ADDRESS</p>
             <button onClick={copyEmail} className="email-btn">
               {personalInfo.email}
             </button>
           </div>
 
           <div className="contact-platforms">
-            <p className="label">platforms</p>
+            <p className="label">PLATFORMS</p>
             <div className="contact-icons">
               <a href={personalInfo.socials.github} target="_blank" rel="noreferrer">
                 <i className="fa-brands fa-github"></i>
@@ -221,9 +165,8 @@ function App() {
         </div>
       </section>
 
-      {/* --- Footer Moved OUTSIDE of section to center correctly --- */}
       <footer className="footer-text">
-        designed and built by<br />Cole Swinford
+        Designed & Built by Cole Swinford
       </footer>
 
     </div>

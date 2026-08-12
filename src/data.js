@@ -38,7 +38,7 @@ export const experience = [
             "Architected a modular monolith application structure, strictly defining module boundaries and data ownership to eliminate premature distributed-system complexity while ensuring future scalability.",
             "Established the organization's CI/CD pipeline and built a standardized Docker containerization strategy, reducing manual deployment efforts by over 90%.",
             "Developed reusable internal libraries for Serilog structured logging and Azure Communication Services, reducing setup time for new services by 85%.",
-            "Automated manual insurance workflows, including a parallel-processed compliance application that reduced provider exclusion screening from several hours to under one minute per file."
+            "Engineered automated background solutions across core compliance and internal data workflows, eliminating manual bottlenecks and cutting processing times from hours to minutes."
         ]
     },
     {
@@ -48,8 +48,8 @@ export const experience = [
         link: "https://www.IGear.com/",
         dates: "May - August 2024",
         bullets: [
-            "Enhanced new features of the flagship Squeaks product and integration with Microsoft Teams",
-            "Used .NET with C# for fullstack Windows development"
+            "Developed core system enhancements for the flagship Squeaks platform and expanded its Microsoft Teams integration.",
+            "Engineered full-stack C# and .NET application components, connecting desktop client UIs with backend service logic."
         ]
     },
     {
@@ -59,10 +59,9 @@ export const experience = [
         link: "https://www.IGear.com/",
         dates: "August - December 2023",
         bullets: [
-            "Built foundation of Microsoft Teams integration feature for flagship Squeaks product",
-            "Used Microsoft Teams Adaptive Cards using Markup, Typescript, and .NET with C#",
-            "Implemented products using Docker containers and Kubernetes",
-            "Built web apps using ASP .NET Razor/Blazor frameworks using HTML, CSS, JavaScript, and C#"
+            "Developed the foundational Microsoft Teams integration for the flagship Squeaks product, building custom Adaptive Cards with TypeScript, .NET, and C#.",
+            "Built web applications using ASP.NET Core, Blazor, HTML, CSS, and C#.",
+            "Containerized and deployed application services using Docker and Kubernetes."
         ]
     },
     {
@@ -72,15 +71,15 @@ export const experience = [
         link: "https://www.IGear.com/",
         dates: "January - May 2023",
         bullets: [
-            "Prototyped fullstack implementations of new technologies on Windows using .NET with C#",
-            "Debugged apps using Android Studio with Kotlin and Markup"
+            "Prototyped full-stack .NET and C# feature concepts on Windows environments to evaluate technical viability.",
+            "Executed quality assurance and UI testing for mobile applications using Android Studio, Kotlin, and Markup."
         ]
     }
 ];
 
 export const projects = [
     {
-        title: "Spotify Backup Archive",
+        title: "Spotify Backup",
         description: "Self-hosted Dockerized Python utility to locally archive complete Spotify library metadata.",
         tech: "Python • Docker • Bash • REST API",
         icon: "fa-brands fa-github",
