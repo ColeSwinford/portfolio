@@ -155,7 +155,7 @@ export const projects = [
         title: "Funky Monkey Friday",
         description: "Discord bot delivering scheduled server notifications for Funky Monkey Friday.",
         tech: "Python • discord.py",
-        link: "https://github.com/ColeSwinford/FunkyMonkeyFridayBot",
+        link: "https://github.com/ColeSwinford/funky-monkey-friday",
         image: "/images/FMF.webp",
         icon: "github"
     }
